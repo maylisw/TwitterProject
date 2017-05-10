@@ -1,5 +1,6 @@
 /**
  * Created by mayliswhetsel on 5/8/17.
+ * Main class: 2D Array --> Tweet --> Image --> Twitter
  */
 public class TweetTweet {
     public static void main(String[] args) {
