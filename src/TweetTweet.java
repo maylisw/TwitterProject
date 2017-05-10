@@ -8,7 +8,6 @@ public class TweetTweet {
         // URL.getText - > plain text
         //plain test.split(" ")
         //hi
-        //it is alive!!!
-
+        //this can get annoying
     }
 }
