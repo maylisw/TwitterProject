@@ -4,6 +4,9 @@
 public class TweetTweet {
     public static void main(String[] args) {
         System.out.printf("lame");
-        //ssdfg
+        // Create URL object
+        // URL.getText - > plain text
+        //
+        
     }
 }
