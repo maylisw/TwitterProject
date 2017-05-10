@@ -4,8 +4,13 @@
  * Tokenize Strings to sorted array
  */
 public class TextTOSortedArray {
-    public TextTOSortedArray(String text)
-    {
-
+    private String paragraph;
+    public TextTOSortedArray(String text) {
+        paragraph = text;
     }
+    public String[] tokenize() {
+        String[] words = paragraph.split(" ");
+        return words;
+    }
+    //loop through check is alpha numeric on all last digits nex emthodgoes there
 }
