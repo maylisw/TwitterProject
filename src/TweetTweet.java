@@ -8,6 +8,6 @@ public class TweetTweet {
         // URL.getText - > plain text
         //plain test.split(" ")
         //hi
-
+        //this can get annoying
     }
 }
