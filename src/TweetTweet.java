@@ -6,7 +6,7 @@ public class TweetTweet {
         System.out.printf("lame");
         // Create URL object
         // URL.getText - > plain text
-        //
-        
+        //plain test.split(" ")
+
     }
 }
