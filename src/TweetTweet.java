@@ -7,7 +7,9 @@ public class TweetTweet {
         System.out.printf("lame");
         // Create URL object
         // URL.getText - > plain text
-        //plain test.split(" ")
+        String plainText = "Tester string righ here!"
+        TextTOSortedArray sortedArray = new TextTOSortedArray(plainText);
+        sortedArray.tokenize().
         //
     }
 }
