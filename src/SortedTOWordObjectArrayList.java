@@ -4,8 +4,8 @@
  */
 import java.util.ArrayList;
 public class SortedTOWordObjectArrayList {
-    private ArrayList<Word> wordArray = new ArrayList<Word>();
-    private ArrayList<String> sorted = new ArrayList<String>();
+    private ArrayList<Word> wordArray = new ArrayList<>();
+    private ArrayList<String> sorted = new ArrayList<>();
 
     public SortedTOWordObjectArrayList(ArrayList<String> sorted){
         this.sorted = sorted;
@@ -13,7 +13,7 @@ public class SortedTOWordObjectArrayList {
 
     public ArrayList<Word> listed(){
         int l = sorted.size();
-        int counter;
+        int counter =0;
         while(l > 0){
             int current = 0;
             String targetWord = sorted.get(current); //gets the first word to compare
@@ -40,5 +40,6 @@ public class SortedTOWordObjectArrayList {
             Word words = new Word(targetWord, counter);
             wordArray.add(words);
         }
+        return wordArray;
     }
 }
