@@ -3,7 +3,7 @@
  * Tagger class to determine parts of speech
  * ??? Why is this an entire class right now? With only one method? I'll figure it out later.
  */
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 //import java.util.Set;
@@ -27,4 +27,4 @@ public class Tagger {
         }
         return h;
     }
-}
+}*/
