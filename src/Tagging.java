@@ -25,6 +25,6 @@ public class Tagger {
                  h.put((String) t, (string) t.tag());
             }
         }
-        return h;
+        return h; //h
     }
 }
