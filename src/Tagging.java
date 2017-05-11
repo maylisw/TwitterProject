@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 //import java.util.Set;
-public class Tagger {
+/*public class Tagger {
     private ArrayList<Word> wordList = new ArrayList<>();
 
     public Tagger(ArrayList<Word> wordList){
@@ -27,4 +27,4 @@ public class Tagger {
         }
         return h;
     }
-}
+}*/

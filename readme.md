@@ -1,14 +1,11 @@
-# TwitterGenerator
-### To-Do
-1. Take in a URL
-2. Get website code
-3. Get website text
-4. Tokanize text
-6. Find most common words
-5. Find part of speech
-6. Plug into template
-7. Generate tweet
-8. Show Jlabel
->I think we should rethink our structure and use old code but not fix old code... 
->Does that make any sense?
-#### In Summary: Restart but reuse good code
+###Steps
+1. URL -> HTML
+2. HTML -> Plain text
+3. ~~Plain text -> Tokenized Strings~~
+4. ~~Toknized strings -> Sorted String[]~~
+5. Sorted String[] -> ArrayList<Word(#, string)>
+6. ArrayList<Word(#, string)> -> ArrayList<Word> by part of speech
+7. ArrayList<Word> by part of speech -> 2D array of Strings by part of speech
+8. 2D + templetes -> Text of tweet
+9. Text of tweet -> Image and tweet using twitter API?
+
