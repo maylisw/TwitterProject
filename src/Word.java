@@ -9,26 +9,24 @@ public class Word implements Comparable<Word>
     private String word;
     //private String partOfSpeech;
     private int timesFound;
-    public Word(String w, int i) /*Maylis, does this store an infinite amount of Word objs or
-                                            is it just one and we have to recreate one for every set?*/
+    public Word(String w, int i)
     {
         word = w;
-        //partOfSpeech = a;
         timesFound = i;
     }
-    public int compareTo(Word other){
+    public int compareTo(Word other) {
         return other.timesFound - this.timesFound;
     }
-    public String getWord()
-    {
+
+    public String getWord() {
         return word;
     }
-    /*public String getPartOfSpeech()
-    {
-        return partOfSpeech;
-    }*/
-    public int getTimesFound()
-    {
+
+    public int getTimesFound() {
         return timesFound;
+    }
+
+    public void setTimesFound(int timesFound) {
+        this.timesFound = timesFound;
     }
 }
