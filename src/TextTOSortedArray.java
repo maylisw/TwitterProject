@@ -24,5 +24,6 @@ public class TextTOSortedArray {
                 s[i] = fin; //set new edited string to index i
             }
         }
+        return s;
     }
 }
