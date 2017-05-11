@@ -5,35 +5,28 @@
 import java.util.ArrayList;
 public class SortedTOWordObjectArrayList {
     private ArrayList<Word> wordArray = new ArrayList<>();
-    private ArrayList<String> sorted = new ArrayList<>();
+    private String[] sorted;
 
-    public SortedTOWordObjectArrayList(ArrayList<String> sorted){
-        this.sorted = sorted;
+    public SortedTOWordObjectArrayList(String[] s){
+        sorted = s;
     }
 
     public ArrayList<Word> listed(){
-        int l = sorted.size();
         int counter =0;
-        while(l > 0){
-            int current = 0;
-            String targetWord = sorted.get(current); //gets the first word to compare
-            current = 1; //sets it to look to the next position
-            /*for(current; current < l - 1; l++){
-                String gottenWord = sorted.get(current);
-                if(gottenWord.compareTo(targetWord) == 0){
-
-                }
-            }*/
+        int current = 0;
+        while(current < sorted.length - 1){ //while have not reached the end
+            String targetWord = sorted[current]; //gets the first word to compare
+            current = current + 1; //sets it to look at the next position
             boolean same = true; //when the words are the same, continue on
             while(same){
-                String gottenWord = sorted.get(current);
+                String gottenWord = sorted[current];
                 if(gottenWord.compareTo(targetWord) == 0){
                     counter++;
                 }
                 else{
                     same = false; //ends the while loop for this word
                     for(int i = counter; i > 0; i--){
-                        sorted.remove(i - 1); //removes the checked words
+                        current = i; //looks from check words onward
                     }
                 }
             }
