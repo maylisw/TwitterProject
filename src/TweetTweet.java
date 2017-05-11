@@ -8,8 +8,10 @@ public class TweetTweet {
         // Create URL object
         // URL.getText - > plain text
         String plainText = "Tester string righ here!"
-        TextTOSortedArray sortedArray = new TextTOSortedArray(plainText);
-        sortedArray.tokenize().
+        TextTOSortedArray obj = new TextTOSortedArray(plainText);
+        tokenArray = obj.tokenize();
+        betterTokenArray = obj.sort(tokenArray);
+
         //
     }
 }
