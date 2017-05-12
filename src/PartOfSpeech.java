@@ -10,6 +10,6 @@ public class PartOfSpeech {
 
     public PartOfSpeech(ArrayList<Word> words){
         this.words = words;
-    }
+    } //should work
 
 }
