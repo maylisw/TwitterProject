@@ -33,7 +33,7 @@ public class SortedTOWordObjectArrayList {
                 }
                 else{
                     same = false; //ends the while loop for this word
-                    System.out.println("im not the same");
+                    System.out.println("im not the same"); //
                 }
             }
             wordArray.add(new Word(targetWord, counter));
