@@ -30,7 +30,7 @@ public class PartOfSpeech {
                 List<TaggedWord> tSentence = tagger.tagSentence(sentence);
                 for(TaggedWord t: tSentence )
                 {
-                    h.put((String) t, (string) t.tag());
+                    h.put((String) t, (string) t.tag()); //ugh
                 }
             }
         }
