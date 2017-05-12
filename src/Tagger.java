@@ -66,7 +66,7 @@ public class Tagger {
                 case "JJS": {
                     JJS.add(w);
                     break;
-                }//
+                }//dsf
                 case "VBD": {
                     VBD.add(w);
                     break;
