@@ -9,3 +9,16 @@
 8. 2D + templetes -> Text of tweet
 9. Text of tweet -> Image and tweet using twitter API?
 
+SPECIAL CLASS : hold 12 array lists named
+singular noun
+plural noun
+infinite verb
+Non- third person singular present
+verb third person singular
+proper noun singular
+proper noun plural
+adjective
+comparative adjectives
+superlative adjectives
+past tense verb
+past participle verb
