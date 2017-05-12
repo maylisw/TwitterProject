@@ -15,7 +15,7 @@ public class SortedTOWordObjectArrayList {
         int counter = 1;
         int current = 0;
         while(current < sorted.length){ //while have not reached the end
-            String targetWord = sorted[current]; //gets the first word to compare
+            String targetWord = sorted[current].toLowerCase(); //gets the first word to compare
             if(current == sorted.length - 1) { //cuts short if last word
                 wordArray.add(new Word(targetWord, counter));
                 break;
@@ -25,12 +25,15 @@ public class SortedTOWordObjectArrayList {
             }
             boolean same = true; //when the words are the same, continue on
             while(same){
-                String gottenWord = sorted[current];
+                String gottenWord = sorted[current].toLowerCase();
                 if(gottenWord.compareTo(targetWord) == 0){
                     counter++;
+                    current ++;
+                    System.out.println("Im Here");
                 }
                 else{
                     same = false; //ends the while loop for this word
+                    System.out.println("im not the same");
                 }
             }
             wordArray.add(new Word(targetWord, counter));
