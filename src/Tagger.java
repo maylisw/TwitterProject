@@ -10,18 +10,18 @@ public class Tagger {
     }
     public POSArrayLists listTag(){
        for(Word w: tagME){
-           ArrayList<Word> NN;
-           ArrayList<Word> NNS;
-           ArrayList<Word> VB;
-           ArrayList<Word> VBP;
-           ArrayList<Word> VBZ;
-           ArrayList<Word> NNP;
-           ArrayList<Word> NPPS;
-           ArrayList<Word> JJ;
-           ArrayList<Word> JJR;
-           ArrayList<Word> JJS;
-           ArrayList<Word> VBD;
-           ArrayList<Word> VBN;
+           ArrayList<Word> NN = new ArrayList<>();
+           ArrayList<Word> NNS = new ArrayList<>();
+           ArrayList<Word> VB = new ArrayList<>();
+           ArrayList<Word> VBP = new ArrayList<>();
+           ArrayList<Word> VBZ = new ArrayList<>();
+           ArrayList<Word> NNP = new ArrayList<>();
+           ArrayList<Word> NNPS = new ArrayList<>();
+           ArrayList<Word> JJ = new ArrayList<>();
+           ArrayList<Word> JJR = new ArrayList<>();
+           ArrayList<Word> JJS = new ArrayList<>();
+           ArrayList<Word> VBD = new ArrayList<>();
+           ArrayList<Word> VBN = new ArrayList<>();
            PartOfSpeech p = new PartOfSpeech(w);
            String partOfSpeech = p.tagging();
            switch(partOfSpeech){
@@ -72,12 +72,17 @@ public class Tagger {
                }
                case "JJS":
                {
-                   JSS.add(w);
+                   JJS.add(w);
                    break;
                }
                case "VBD":
                {
                    VBD.add(w);
+                   break;
+               }
+               case "VBN":
+               {
+                   VBN.add(w);
                    break;
                }
                default:
