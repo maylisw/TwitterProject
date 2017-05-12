@@ -17,7 +17,7 @@ public class SortedTOWordObjectArrayList {
         while(current < sorted.length){ //while have not reached the end
             String targetWord = sorted[current].toLowerCase(); //gets the first word to compare
             if(current == sorted.length - 1) { //cuts short if last word
-                wordArray.add(new Word(targetWord, counter));
+                wordArray.add(new Word(targetWord, counter)); //doesn't solve the issue if last word is the same -CL
                 break;
             }
             else {
