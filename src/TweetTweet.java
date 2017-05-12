@@ -16,6 +16,10 @@ public class TweetTweet {
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
+        Tagger t = new Tagger(wordList);
+        POSArrayLists taggedLists = t.listTag();
+        /*Choosen c = new Choosen(taggedLists);
+        String tweet = choosen.createText();*/
 
 
     }
