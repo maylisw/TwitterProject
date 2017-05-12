@@ -10,6 +10,18 @@ public class Tagger {
     }
     public POSArrayLists listTag(){
        for(Word w: tagME){
+           ArrayList<Word> NN;
+           ArrayList<Word> NNS;
+           ArrayList<Word> VB;
+           ArrayList<Word> VBP;
+           ArrayList<Word> VBZ;
+           ArrayList<Word> NNP;
+           ArrayList<Word> NPPS;
+           ArrayList<Word> JJ;
+           ArrayList<Word> JJR;
+           ArrayList<Word> JJS;
+           ArrayList<Word> VBD;
+           ArrayList<Word> VBN;
            PartOfSpeech p = new PartOfSpeech(w);
            String partOfSpeech = p.tagging();
            switch(partOfSpeech){
