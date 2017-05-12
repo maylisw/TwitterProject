@@ -9,7 +9,7 @@ public class TweetTweet {
     public static void main(String[] args) {
         // Create URL object
         // URL.getText - > plain text
-        String plainText = "TEXT GOES HERE ZED TEXT";
+        String plainText = "TEXT GOES HERE ZED TEXT ZED";
         TextTOSortedArray obj = new TextTOSortedArray(plainText);
         String[] tokenArray = obj.tokenize();
         String[] betterTokenArray = obj.sort(tokenArray);
