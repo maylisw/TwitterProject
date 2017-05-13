@@ -61,9 +61,7 @@ public class POSArrayLists{
         return properNounPlural;
     }
 
-    public ArrayList<Word> getAdjective() {
-        return adjective;
-    }
+    public ArrayList<Word> getAdjective() { return adjective; }
 
     public ArrayList<Word> getComparativeAdjectives() {
         return comparativeAdjectives;
