@@ -52,51 +52,63 @@ public class PartOfSpeech {
                     if(words.get(current).equals(targetedWord)){
                         if(tag.equals("NN")){
                             NN.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("NNS")){
                             NNS.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("VB")){
                             VB.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("VBP")){
                             VBP.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("VBZ")){
                             VBZ.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("NNP")){
                             NNP.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("NNPS")){
                             NNPS.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("JJ")){
                             JJ.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("JJR")){
                             JJR.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("JJS")){
                             JJS.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                         else if(tag.equals("VBD")){
                             VBD.add(tagWords.get(0));
                             current++;
+                            w--;
                         }
                         else if(tag.equals("VBN")){
                             VBN.add(tagWords.get(0));
-                            current++;
+                            current ++;
+                            w--;
                         }
                     }
                 }
