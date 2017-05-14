@@ -16,7 +16,8 @@ public class TweetTweet {
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
-        PartOfSpeech (ArrayList<Word> words, String paragraph)
+        PartOfSpeech p = new PartOfSpeech(wordList, plainText);
+        POSArrayLists taggedLists = p.tagging();
         /*Choosen c = new Choosen(taggedLists);
         String tweet = choosen.createText();*/
 

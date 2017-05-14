@@ -1,9 +1,9 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  * Created by mayliswhetsel on 5/12/17.
  */
-public class Tagger {
+/*public class Tagger {
     private ArrayList<Word> tagME;
 
     public Tagger(ArrayList<Word> w) {
@@ -83,4 +83,4 @@ public class Tagger {
         return new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
     }
 }
-
+*/

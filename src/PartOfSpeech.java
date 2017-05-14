@@ -5,7 +5,6 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import java.io.BufferedReader;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by princ on 10/05/2017.
@@ -43,68 +42,67 @@ public class PartOfSpeech {
             int w = words.size();
             int current = 0;
             while(w > 0){
-                String word = TaggedWord.word(); //how?
-                for (HasWord targeted : sentence){
-                    String targetedWord = targeted.word();
-                    String tag = targeted.toString();
+                for (TaggedWord targeted : tagWords){
+                    String targetedWord = targeted.value();
+                    String tag = targeted.tag();
                     if(words.get(current).equals(targetedWord)){
                         if(tag.equals("NN")){
-                            NN.add(tagWords.get(0));
+                            NN.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("NNS")){
-                            NNS.add(tagWords.get(0));
+                            NNS.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("VB")){
-                            VB.add(tagWords.get(0));
+                            VB.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("VBP")){
-                            VBP.add(tagWords.get(0));
+                            VBP.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("VBZ")){
-                            VBZ.add(tagWords.get(0));
+                            VBZ.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("NNP")){
-                            NNP.add(tagWords.get(0));
+                            NNP.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("NNPS")){
-                            NNPS.add(tagWords.get(0));
+                            NNPS.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("JJ")){
-                            JJ.add(tagWords.get(0));
+                            JJ.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("JJR")){
-                            JJR.add(tagWords.get(0));
+                            JJR.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("JJS")){
-                            JJS.add(tagWords.get(0));
+                            JJS.add(words.get(current));
                             current ++;
                             w--;
                         }
                         else if(tag.equals("VBD")){
-                            VBD.add(tagWords.get(0));
+                            VBD.add(words.get(current));
                             current++;
                             w--;
                         }
                         else if(tag.equals("VBN")){
-                            VBN.add(tagWords.get(0));
+                            VBN.add(words.get(current));
                             current ++;
                             w--;
                         }
