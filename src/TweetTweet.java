@@ -17,7 +17,8 @@ public class TweetTweet {
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
-        POSArrayLists taggedLists = p.tagging();
+        POSArrayLists pos = p.tagging();
+        //POSArrayLists taggedLists = p.tagging(); not needed anymore I don't think.
         /*Choosen c = new Choosen(taggedLists);
         String tweet = choosen.createText();*/
 
