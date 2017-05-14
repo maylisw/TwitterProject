@@ -9,5 +9,14 @@
 8. 2D + templetes -> Text of tweet
 9. Text of tweet -> Image and tweet using twitter API?
 
-choosen call madlibs then instance var = 2D array
-creatText plug wwords into random tweet returns a string
+######Chosen
+ - Calls MadLibs in constructor to create the 2D array
+ - MadLibs will generate random template based on whether news is good or bad
+ - method createText will plug words into the MadLibs tweet to return a string
+
+######Madlibs
+-picks random tweet then returns an array/ array list:
+
+{"Nobody should be allowed to", "verb", "the", "noun", "! Wrong wrong wrong!"}
+
+###Can we delete Tagger class?
