@@ -16,7 +16,6 @@ public class PartOfSpeech {
     //private String word = "";
     private ArrayList<Word> words = new ArrayList<>();
     private String paragraph = "";
-    private POSArrayLists sorted;
 
 
     public PartOfSpeech(ArrayList<Word> words, String paragraph){
@@ -24,7 +23,7 @@ public class PartOfSpeech {
         this.paragraph = paragraph;
     }
 
-    public String tagging(){
+    public POSArrayLists tagging(){
         ArrayList<Word> NN = new ArrayList<>();
         ArrayList<Word> NNS = new ArrayList<>();
         ArrayList<Word> VB = new ArrayList<>();
@@ -38,10 +37,9 @@ public class PartOfSpeech {
         ArrayList<Word> VBD = new ArrayList<>();
         ArrayList<Word> VBN = new ArrayList<>();
         MaxentTagger tagger = new MaxentTagger("english-left3words-distsim.tagger");//model fie from their models
-        List<List<HasWord>> sentences = MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
-        for (List<HasWord> sentence : sentences) {
-            List<TaggedWord> tagWords = tagger.tagSentence(sentence);
-            //int t = tagWords.size();
+        ArrayList<ArrayList<HasWord>> sentences = (ArrayList) MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
+        for (ArrayList<HasWord> sentence : sentences) {
+            ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
             int w = words.size();
             int current = 0;
             while(w > 0){
@@ -113,14 +111,9 @@ public class PartOfSpeech {
                     }
                 }
             }
-            //returnWord = tagWords.get(0).toString();
-            /*for(TaggedWord t: tSentence )
-            {
-                h.put((String) t, (string) t.tag()); //ugh
-            }*/
 
         }
-        ArrayList<Word>[] POSArrayLists = ArrayList<Word>[NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN];
-        return POSArrayLists;
+        POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
+        return p;
     }
 }
