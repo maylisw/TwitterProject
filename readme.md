@@ -13,6 +13,8 @@
  - Calls MadLibs in constructor to create the 2D array
  - MadLibs will generate random template based on whether news is good or bad
  - method createText will plug words into the MadLibs tweet to return a string
+ 
+USE OLD Madlibs Code check carolines computer
 
 ######Madlibs
 -picks random tweet then returns an array/ array list:
