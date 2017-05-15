@@ -18,6 +18,7 @@
 -picks random tweet then returns an array/ array list:
 
 {"Nobody should be allowed to", "verb", "the", "noun", "! Wrong wrong wrong!"}
+For MadLibs, we can assign a double range for each template in the constructor (does it need to take in anything?)and access the get from Chosen for d to get which one.
 
 ###Can we delete Tagger class? -Yes, it's not needed anymore
 
