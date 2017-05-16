@@ -4,5 +4,9 @@
 public class Chosen {
     private String[][] keyWords;
     //private array or arraylist
-
+    //number of nouns
+    /*
+    * takes a pos
+    * gets which madlib it is
+    * */
 }
