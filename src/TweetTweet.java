@@ -20,6 +20,9 @@ public class TweetTweet {
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists);
         String [][] filled = c.fill(taggedLists);
+        /*
+
+         */
         //String tweet = chosen.createText();
 
 
