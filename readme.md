@@ -30,3 +30,5 @@ For MadLibs, we can assign a double range for each template in the constructor (
  - Creates/returns 2D array of # of words needed --> assign to a
  - Double gotten assign to d
  - 2 get methods accessing a and d
+ 
+ I think step 7 is done and it's not terribly complicated.
