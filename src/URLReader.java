@@ -1,20 +1,37 @@
-/**
- * Created by princ on 18/05/2017.
- */
-//reads from the BufferedReader thereby reading from the URL. Everything read is copied to the standard output stream:
-
-import java.net.*; //URL reader
+import java.net.*;
 import java.io.*;
 
 public class URLReader {
-    public static void main(String[] args) throws Exception {
+    private String HTMLCode = "";
 
-        URL oracle = new URL("http://www.oracle.com/");
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(oracle.openStream()));
+    public URLReader(String URL){}
+
+    /**
+     * Takes the URL input and returns an HTML code.
+     * @param URL
+     * @return HTML code for webpage
+     */
+    public String readerReturn(String URL){
+        URL oracle = null;
+        BufferedReader in = null;
         String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
-        in.close();
+        try {
+            oracle = new URL(URL);
+            in = new BufferedReader(
+                    new InputStreamReader(oracle.openStream()));
+            while ((inputLine = in.readLine()) != null)
+                //System.out.println(inputLine);
+                HTMLCode += inputLine;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return HTMLCode;
     }
 }
