@@ -32,3 +32,6 @@ For MadLibs, we can assign a double range for each template in the constructor (
  - 2 get methods accessing a and d
  
  I think step 7 is done and it's not terribly complicated.
+ 
+ #####Step 2
+ - Takes the HTML String and turn to plain text (no idea currently)
