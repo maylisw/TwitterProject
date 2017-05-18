@@ -35,7 +35,7 @@ public class PartOfSpeech {
         ArrayList<Word> JJS = new ArrayList<>();
         ArrayList<Word> VBD = new ArrayList<>();
         ArrayList<Word> VBN = new ArrayList<>();
-        MaxentTagger tagger = new MaxentTagger("english-left3words-distsim.tagger");//model fie from their models
+        MaxentTagger tagger = new MaxentTagger("left3words-wsj-0-18.tagger");//model fie from their models
         ArrayList<ArrayList<HasWord>> sentences = (ArrayList) MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
