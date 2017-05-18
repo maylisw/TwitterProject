@@ -3,7 +3,7 @@
  */
 //reads from the BufferedReader thereby reading from the URL. Everything read is copied to the standard output stream:
 
-import java.net.*;
+import java.net.*; //URL reader
 import java.io.*;
 
 public class URLReader {
