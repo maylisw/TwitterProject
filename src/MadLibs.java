@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Created by mayliswhetsel on 5/16/17.
  */
-/*public class MadLibs {
+public class MadLibs {
     private String tweet;
     /*private int numberOfSingularNouns; 0
     private int numberOfPluralNouns; 1
@@ -16,9 +16,9 @@ import java.util.ArrayList;
     private int numberOfComparativeAdjectives; 8
     private int numberOfSuperlativeAdjectives; 9
     private int numberOfPastTenseVerbs; 10
-    private int numberOfPastParticipleVerbs; 11
-    */
- /*   public MadLibs(double n, String[][] words)
+    private int numberOfPastParticipleVerbs; 11*/
+
+    public MadLibs(double n, String[][] words)
     {
         int k = (int) n*6 +1;
         switch(k)
@@ -33,13 +33,13 @@ import java.util.ArrayList;
                 tweet = words[5][0] + " just stated that (noun) (past tense verb). Very untrue!";
                 break;
             case 4:
-                tweet = "";
+                tweet = "Reports that " + words[6][0] + words[10][0] + "by CNN are completely untrue - FAKE NEWS!";
                 break;
             case 5:
-                tweet = "";
+                tweet = "Nobody should be allowed to " + words[10][0] + "! Wrong wrong wrong!";
                 break;
             case 6:
-                tweet = "";
+                tweet = "Finally a news outlet that is reporting the truth, " + words[6][0] + "is " + words[7][0] + "Very true!";
                 break;
         }
 
@@ -49,11 +49,3 @@ import java.util.ArrayList;
         return tweet;
     }
 }
-         \n" +
-        "\n" +
-        "Reports that (noun) (past tense verb) by @CNN are completely untrue- FAKE NEWS!\n" +
-        "\n" +
-        "Nobody should be allowed to (verb) the (noun)! Wrong wrong wrong!\n" +
-        "\n" +
-        "Finally a news outlet that is reporting the truth, (noun) is (adjective). Very True!\n"
-        */
