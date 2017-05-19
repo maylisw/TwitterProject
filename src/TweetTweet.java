@@ -9,7 +9,10 @@ public class TweetTweet {
     public static void main(String[] args) {
         // Create URL object
         // URL.getText - > plain text
-        String plainText = "TEXT GOES HERE ZED TEXT ZED";
+        URLReader url = new URLReader("https://www.theodysseyonline.com/rape-culture-important-details-missed"); //sample text for now
+        String HTMLCode = url.readerReturn("https://www.theodysseyonline.com/rape-culture-important-details-missed");
+        HTMLtoPlainText html = new HTMLtoPlainText();
+        String plainText = html.replace(HTMLCode);
         TextTOSortedArray obj = new TextTOSortedArray(plainText);
         String[] tokenArray = obj.tokenize();
         String[] betterTokenArray = obj.sort(tokenArray);
@@ -20,11 +23,9 @@ public class TweetTweet {
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists);
         String [][] filled = c.fill(taggedLists);
-        /*
-
-         */
-        //String tweet = chosen.createText();
-
-
+        double d = c.getTemplate();
+        MadLibs madLibs = new MadLibs(d, filled);
+        String tweet = madLibs.getTweet();
+        System.out.print(tweet);
     }
 }

@@ -34,4 +34,6 @@ For MadLibs, we can assign a double range for each template in the constructor (
  I think step 7 is done and it's not terribly complicated.
  
  #####Step 2
- - Takes the HTML String and turn to plain text (no idea currently)
+ - Takes the HTML String and turn to plain text
+ - The plain text is one long string --> seems to have a bunch of HTML formatting code in the middle
+ - Need to get rid of all the random bits because it might throw off the tokenizer and tagger

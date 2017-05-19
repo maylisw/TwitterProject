@@ -4,28 +4,35 @@ import java.util.ArrayList;
  * Created by mayliswhetsel on 5/14/17.
  */
 public class Chosen {
-    private String[][] keyWords = new String[12][3]; //currently largest # to fill per tweet is 3; later make separate
+    private String[][] keyWords = new String[12][]; //currently largest # to fill per tweet is 3; later make separate
     private double d;
 
     public Chosen(POSArrayLists p){
         d = Math.random();
         if(d >= 0 && d < 1.0/6){
-            //insert how many for each POS
+            keyWords[1] = new String[1];
+            keyWords[4] = new String[1];
         }
         else if(d >= 1.0/6 && d < 1.0/3){
-            //insert how many for each POS
+            keyWords[8] = new String[1];
+            keyWords[5] = new String[1];
+            keyWords[0] = new String[1];
         }
         else if(d >= 1.0/3 && d < 0.5){
-            //insert how many for each POS
+            keyWords[5] = new String[1];
+            keyWords[6] = new String[1];
+            keyWords[1] = new String[1];
         }
         else if(d >= 0.5 && d < 2.0/3){
-            //insert how many for each POS
+            keyWords[6] = new String[1];
+            keyWords[10] = new String[1];
         }
         else if(d >= 2.0/3 && d < 5.0/6){
-            //insert how many for each POS
+            keyWords[10] = new String[1];
         }
         else {
-            //insert how many for each POS
+            keyWords[6] = new String[1];
+            keyWords[7] = new String[1];
         }
     }
 

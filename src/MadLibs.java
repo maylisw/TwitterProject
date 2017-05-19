@@ -30,7 +30,7 @@ public class MadLibs {
                 tweet = "Despite the efforts of " + words[8][0] + " " + words[5][0] + " to stop us, " + words[0][0] + " is moving quickly!";
                 break;
             case 3:
-                tweet = words[5][0] + " just stated that (noun) (past tense verb). Very untrue!";
+                tweet = words[5][0] + " just stated that " + words[6][0] + words[1][0] + ". Very untrue!";
                 break;
             case 4:
                 tweet = "Reports that " + words[6][0] + words[10][0] + "by CNN are completely untrue - FAKE NEWS!";
