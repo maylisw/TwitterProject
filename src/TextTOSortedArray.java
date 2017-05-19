@@ -10,18 +10,25 @@ public class TextTOSortedArray {
     public TextTOSortedArray(String text) {
         paragraph = text;
     }
+
+    /**
+     * Tokenizes all the words in the paragraph
+     * @return array of String words.
+     */
     public String[] tokenize() {
         String[] words = paragraph.split(" ");
         return words;
     }
-    public String[] sort(String[] s){
-        for(int i = 0; i < s.length; i++){ //Go through all words
+    public String[] punctuationRemoval(String[] s){
+        for(int i = 0; i < s.length; i++) { //Go through all words
             String temp = s[i]; //create variable housing string at index i
-            String last = temp.substring(temp.length()-1, temp.length()); //last char in the string at i
-            if(!StringUtils.isAlphanumeric(last)) //if not alpha numeric
-            {
-                String fin = temp.substring(0, temp.length() -1);  //remove last digits
-                s[i] = fin; //set new edited string to index i
+            if (temp.length() > 0) {
+                String last = temp.substring(temp.length() - 1, temp.length()); //last char in the string at i
+                if (!StringUtils.isAlphanumeric(last)) //if not alpha numeric
+                {
+                    String fin = temp.substring(0, temp.length() - 1);  //remove last digits
+                    s[i] = fin; //set new edited string to index i
+                }
             }
         }
         return s;
