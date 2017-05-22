@@ -13,13 +13,17 @@ public class TweetTweet {
         String HTMLCode = url.readerReturn("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text");
         HTMLtoPlainText html = new HTMLtoPlainText();
         String plainText = html.replace(HTMLCode);
-        TextTOSortedArray obj = new TextTOSortedArray(plainText); //plain text goes in ();
-        //String[] tokenArray = obj.tokenize();
-        String[] betterTokenArray = obj.tokenize();
-        //String[] betterTokenArray = obj.punctuationRemoval(tokenArray);
+        TextTOSortedArray obj = new TextTOSortedArray(plainText); //plain text goes in ()
+        String[] tokenArray = obj.tokenize();
+        String[] nextTokenArray = obj.punctuationRemoval(tokenArray);
+        String[] betterTokenArray = obj.punctuationRemoval(nextTokenArray);
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
+        for(Word w: wordList)
+        {
+            System.out.println(w.getWord());
+        }
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists);
