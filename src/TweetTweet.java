@@ -16,7 +16,10 @@ public class TweetTweet {
         TextTOSortedArray obj = new TextTOSortedArray(plainText); //plain text goes in ()
         String[] tokenArray = obj.tokenize();
         String[] nextTokenArray = obj.punctuationRemoval(tokenArray);
-        String[] betterTokenArray = obj.punctuationRemoval(nextTokenArray);
+        String[] bestTokenArray = obj.punctuationRemoval(nextTokenArray);
+        String[] amazingTokenArray = obj.punctuationRemoval(bestTokenArray);
+        String[] tokenArray3 = obj.punctuationRemoval(amazingTokenArray)
+        String[] betterTokenArray = obj.frontPunctuationRemoval(tokenArray3);
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
