@@ -9,6 +9,8 @@ public class TweetTweet {
     public static void main(String[] args) {
         // Create URL object
         // URL.getText - > plain text
+        //Maybe userInput
+        //String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + /*URL User Input*/ "&output=text";
         URLReader url = new URLReader("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text"); //sample text for now
         String HTMLCode = url.readerReturn("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text");
         HTMLtoPlainText html = new HTMLtoPlainText();
@@ -18,7 +20,7 @@ public class TweetTweet {
         String[] nextTokenArray = obj.punctuationRemoval(tokenArray);
         String[] bestTokenArray = obj.punctuationRemoval(nextTokenArray);
         String[] amazingTokenArray = obj.punctuationRemoval(bestTokenArray);
-        String[] tokenArray3 = obj.punctuationRemoval(amazingTokenArray)
+        String[] tokenArray3 = obj.punctuationRemoval(amazingTokenArray);
         String[] betterTokenArray = obj.frontPunctuationRemoval(tokenArray3);
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);

@@ -12,4 +12,7 @@
  #####Issues
  - GET rid of punctuation (maylis)
  - Test all the way done to tweet (maylis)
- 
+ - Fix URL area (HTTP error 403) (Caroline)
+ - Get image (j-labels) (Caroline)
+ - User Input later when we have time (both?)
+ - Create new tweets and more detail

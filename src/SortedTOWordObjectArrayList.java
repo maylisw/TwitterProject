@@ -39,4 +39,14 @@ public class SortedTOWordObjectArrayList {
         }
         return wordArray;
     }
+    //returning everything in sorted array for testing
+    public String print(ArrayList<Word> s){
+        String ws = "";
+        int l = s.size();
+        for(int i = 0; i < l; i++){
+
+            ws = ws + s.get(i).getWord() + ", ";
+        }
+        return ws;
+    }
 }
