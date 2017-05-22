@@ -32,3 +32,14 @@ For MadLibs, we can assign a double range for each template in the constructor (
  - 2 get methods accessing a and d
  
  I think step 7 is done and it's not terribly complicated.
+ 
+ #####Step 2
+ - Takes the HTML String and turn to plain text
+ - The plain text is one long string --> seems to have a bunch of HTML formatting code in the middle
+ - Need to get rid of all the random bits because it might throw off the tokenizer and tagger
+ 
+ #####Issues
+ - There's a lot of issues in TextTOSortedArray
+ - And the POSArrayLists have a slight issue.
+ - Simplify the URL reader area.
+ 

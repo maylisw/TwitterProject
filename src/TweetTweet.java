@@ -9,10 +9,14 @@ public class TweetTweet {
     public static void main(String[] args) {
         // Create URL object
         // URL.getText - > plain text
-        String plainText = "TEXT GOES HERE ZED TEXT ZED";
-        TextTOSortedArray obj = new TextTOSortedArray(plainText);
-        String[] tokenArray = obj.tokenize();
-        String[] betterTokenArray = obj.sort(tokenArray);
+        URLReader url = new URLReader("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text"); //sample text for now
+        String HTMLCode = url.readerReturn("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text");
+        HTMLtoPlainText html = new HTMLtoPlainText();
+        String plainText = html.replace(HTMLCode);
+        TextTOSortedArray obj = new TextTOSortedArray(plainText); //plain text goes in ();
+        //String[] tokenArray = obj.tokenize();
+        String[] betterTokenArray = obj.tokenize();
+        //String[] betterTokenArray = obj.punctuationRemoval(tokenArray);
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
@@ -20,11 +24,9 @@ public class TweetTweet {
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists);
         String [][] filled = c.fill(taggedLists);
-        /*
-
-         */
-        //String tweet = chosen.createText();
-
-
+        double d = c.getTemplate();
+        MadLibs madLibs = new MadLibs(d, filled);
+        String tweet = madLibs.getTweet();
+        System.out.print(tweet);
     }
 }
