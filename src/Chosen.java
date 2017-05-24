@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Created by mayliswhetsel on 5/14/17.
  */
 public class Chosen {
-    private String[][] keyWords = new String[12][]; //currently largest # to fill per tweet is 3; later make separate
+    private String[][] keyWords = new String[12][1]; //currently largest # to fill per tweet is 3; later make separate
     private double d;
 
     public Chosen(POSArrayLists p){

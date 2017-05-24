@@ -16,3 +16,4 @@
  - Get image (j-labels) (Caroline)
  - User Input later when we have time (both?)
  - Create new tweets and more detail
+ - Real issue is somewhere between PartOfSpeech and the real MadLibs (although it's probably before that)
