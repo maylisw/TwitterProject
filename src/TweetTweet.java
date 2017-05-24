@@ -33,14 +33,19 @@ public class TweetTweet {
         //works below here
         Chosen c = new Chosen(taggedLists);
         String [][] filled = c.fill(taggedLists);
-        for(String[] x: filled) {
+        /*for(String[] x: filled) {
             for(String s : x){
                 System.out.println(s);
             }
-        }
+        }*/
         double d = c.getTemplate();
-        MadLibs madLibs = new MadLibs(d, filled);
+        //MadLibs madLibs = new MadLibs(d, filled);
+        //String tweet = madLibs.getTweet();
+        String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
+        MadLibs madLibs = new MadLibs(0.2,s); //tester MadLibs object. Everything else commented out (except your print) is the real main class.
         String tweet = madLibs.getTweet();
-        System.out.print(tweet);
+        Icon image = new ImageIcon("TrumpTweetPage.png");
+        JLabel imageTweet = new JLabel(tweet, image, JLabel.CENTER);
+        System.out.print(imageTweet); //printing out info at JLabel imageTweet
     }
 }
