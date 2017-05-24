@@ -10,10 +10,9 @@
 9. Text of tweet -> Image and tweet using twitter API?
 
  #####Issues
- - Get rid of punctuation (maylis)
- - Test all the way done to tweet (maylis)
- - Fix URL area (HTTP error 403) (Caroline)
- - Get image (j-labels) (Caroline)
- - User Input later when we have time (both?)
- - Create new tweets and more detail
- - Real issue is somewhere between PartOfSpeech and the real MadLibs (although it's probably before that)
+ - Debug tagging
+ - Positive vs Negative (caroline)
+ - Get image (j-labels)
+ - User Input?
+ - twitter API
+ - Create new tweets and more detail?
