@@ -24,7 +24,7 @@ public class TextTOSortedArray {
             String temp = s[i]; //create variable housing string at index i
             if (temp.length() > 0) {
                 String last = temp.substring(temp.length() - 1, temp.length()); //last char in the string at i
-                if (!StringUtils.isAlphanumeric(last)) //if not alpha numeric
+                if (!StringUtils.isAlphanumeric(last) || last.equals(".")) //if not alpha numeric
                 {
                     String fin = temp.substring(0, temp.length() - 1);  //remove last digits
                     s[i] = fin; //set new edited string to index i
@@ -39,7 +39,7 @@ public class TextTOSortedArray {
             String temp = s[i]; //create variable housing string at index i
             if (temp.length() > 0) {
                 String first = temp.substring(0, 1); //first char in the string at i
-                if (!StringUtils.isAlphanumeric(first)) //if not alpha numeric
+                if (!StringUtils.isAlphanumeric(first) || first.equals(".")) //if not alpha numeric
                 {
                     String fin = temp.substring(1, temp.length());  //remove first digit
                     s[i] = fin; //set new edited string to index i
