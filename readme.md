@@ -10,7 +10,7 @@
 9. Text of tweet -> Image and tweet using twitter API?
 
  #####Issues
- - GET rid of punctuation (maylis)
+ - Get rid of punctuation (maylis)
  - Test all the way done to tweet (maylis)
  - Fix URL area (HTTP error 403) (Caroline)
  - Get image (j-labels) (Caroline)
