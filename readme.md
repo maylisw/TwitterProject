@@ -13,7 +13,8 @@
  - Debug tagging (maylis)
  - Positive vs Negative (caroline) (done)
  - Get image (j-labels)(maylis)
- - User Input? (caroline)
+ - Debug MadLibs --> isn't running through all cases (caroline)
+ - User Input? (caroline?)
  - twitter API
  - Create new tweets and more detail?
  
@@ -21,4 +22,3 @@
  - Positive: Breitbart, Fox News
  - Negative: LA Times, CNN, Huffington Post, Tiger, Daily Californian (Berkeley)
  - Neutral: NPR, BBC, NYT, Wall Street Journal
- - Why is the second else if yelling at me?
