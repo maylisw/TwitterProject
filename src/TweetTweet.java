@@ -14,6 +14,7 @@ public class TweetTweet {
         // URL.getText - > plain text
         //Maybe userInput
         //String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + /*URL User Input*/ "&output=text";
+        String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
         URLReader url = new URLReader("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text"); //sample text for now
         String HTMLCode = url.readerReturn("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text");
         HTMLtoPlainText html = new HTMLtoPlainText();
@@ -28,10 +29,13 @@ public class TweetTweet {
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
+        PositiveNegative posNeg = new PositiveNegative(boilerPipeURL);
+        boolean goodBad = posNeg.whichTemplate();
+        //System.out.print(goodBad);
         //works to here
         POSArrayLists taggedLists = p.tagging();
         //works below here
-        Chosen c = new Chosen(taggedLists);
+        Chosen c = new Chosen(taggedLists, goodBad);
         String [][] filled = c.fill(taggedLists);
         /*for(String[] x: filled) {
             for(String s : x){

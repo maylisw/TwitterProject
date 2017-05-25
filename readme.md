@@ -10,9 +10,15 @@
 9. Text of tweet -> Image and tweet using twitter API?
 
  #####Issues
- - Debug tagging
- - Positive vs Negative (caroline)
- - Get image (j-labels)
- - User Input?
+ - Debug tagging (maylis)
+ - Positive vs Negative (caroline) (done)
+ - Get image (j-labels)(maylis)
+ - User Input? (caroline)
  - twitter API
  - Create new tweets and more detail?
+ 
+ #####Positive and Negative
+ - Positive: Breitbart, Fox News
+ - Negative: LA Times, CNN, Huffington Post, Tiger, Daily Californian (Berkeley)
+ - Neutral: NPR, BBC, NYT, Wall Street Journal
+ - Why is the second else if yelling at me?
