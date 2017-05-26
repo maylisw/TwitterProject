@@ -20,7 +20,8 @@ public class MadLibs {
 
     public MadLibs(double n, String[][] words)
     {
-        int k = (int) n*5 +1;
+        int k = (int) (n*5 +1);
+        //System.out.print(k);
         if(k >= 1 && k < 6){
             switch(k)
             {
@@ -31,7 +32,9 @@ public class MadLibs {
                     tweet = "Despite the efforts of " + words[8][0] + " " + words[5][0] + " to stop us, " + words[0][0] + " is moving quickly!";
                     break;
                 case 3: //negative
-                    tweet = words[5][0] + " just stated that " + words[6][0] + " " + words[1][0] + ". Very untrue!";
+                    String w = words[5][0];
+                    int l = w.length();
+                    tweet = w.substring(0, 1).toUpperCase() + w.substring(1, l) + " just stated that " + words[6][0] + " " + words[1][0] + ". Very untrue!";
                     break;
                 case 4: //ONLY for CNN!!! negative
                     tweet = "Reports that " + words[6][0] + " " + words[10][0] + " by CNN are completely untrue - FAKE NEWS!";
