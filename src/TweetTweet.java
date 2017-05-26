@@ -26,19 +26,13 @@ public class TweetTweet {
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
+
         PositiveNegative posNeg = new PositiveNegative(boilerPipeURL);
         boolean goodBad = posNeg.whichTemplate();
-        //System.out.print(goodBad);
-        //works to here
+
         POSArrayLists taggedLists = p.tagging();
-        //works below here
         Chosen c = new Chosen(taggedLists, goodBad);
         String [][] filled = c.fill(taggedLists);
-        /*for(String[] x: filled) {
-            for(String s : x){
-                System.out.println(s);
-            }
-        }*/
         double d = c.getTemplate();
         //MadLibs madLibs = new MadLibs(d, filled);
         //String tweet = madLibs.getTweet();

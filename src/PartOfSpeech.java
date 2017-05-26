@@ -2,6 +2,7 @@ import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.BufferedReader;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -40,14 +41,14 @@ public class PartOfSpeech {
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
             int w = words.size();
-            int current = 0;
+            int current = 1;
             while(w > 0){
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                    //gets to here.
-                    if(words.get(current).equals(targetedWord)){
-                        //never gets here
+                    System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
+                    if(words.get(current).getWord().equals(targetedWord.toLowerCase())){
+                        System.out.println("WORD MATCH!!!");
                         if(tag.equals("NN")){
                             NN.add(words.get(current));
                             current ++;
@@ -108,12 +109,12 @@ public class PartOfSpeech {
                             current ++;
                             w--;
                         }
-                        System.out.println(w);
                     }
                 }
             }
-            System.out.println("I love you");
+            System.out.println(" done with while loop");
         }
+        System.out.print("done");
         POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
         return p;
     }
