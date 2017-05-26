@@ -45,7 +45,7 @@ public class PartOfSpeech {
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                    //gets to here
+                    //gets to here.
                     if(words.get(current).equals(targetedWord)){
                         //never gets here
                         if(tag.equals("NN")){
