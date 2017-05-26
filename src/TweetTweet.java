@@ -40,8 +40,11 @@ public class TweetTweet {
         MadLibs madLibs = new MadLibs(0.4, s); //tester MadLibs object
         String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6
         System.out.print(tweet);
-        //Icon image = new ImageIcon("TrumpTweetPage.png");
-        //JLabel imageTweet = new JLabel(tweet, image, JLabel.CENTER);
-        //System.out.print(imageTweet); //printing out info at JLabel imageTweet
+        Icon image = new ImageIcon("TrumpTweetPage.png");
+        int w = image.getIconWidth();
+        int h = image.getIconHeight();
+        JLabel imageTweet = new JLabel(tweet, image, JLabel.CENTER);
+        imageTweet.setIcon(image);
+        System.out.print(imageTweet); //printing out info at JLabel imageTweet
     }
 }
