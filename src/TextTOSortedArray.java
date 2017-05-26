@@ -1,5 +1,7 @@
 import edu.stanford.nlp.util.StringUtils;
 
+import java.util.ArrayList;
+
 /**
  * Created by mayliswhetsel on 5/10/17.
  * Plain text-> tokenize strings
@@ -17,8 +19,22 @@ public class TextTOSortedArray {
      */
     public String[] tokenize() {
         String[] words = paragraph.split(" ");
-
-        return words;
+        ArrayList<String> temp = new ArrayList<>();
+        int l = words.length;
+        for(int i = 0; i < l; i++){
+            String w = words[i];
+            if(w.matches("[a-zA-Z]+")){
+                temp.add(w);
+            }
+        }
+        int size = temp.size();
+        String[] onlyWords = new String[size];
+        for(String s : temp){
+            int x = 0;
+            onlyWords[x] = s;
+            x++;
+        }
+        return onlyWords;
     }
     public String[] punctuationRemoval(String[] s){
         for(int i = 0; i < s.length; i++) { //Go through all words
