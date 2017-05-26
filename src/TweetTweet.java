@@ -10,9 +10,6 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        // Create URL object
-        // URL.getText - > plain text
-        //Maybe userInput
         //String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + /*URL User Input*/ "&output=text";
         String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
         URLReader url = new URLReader("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text"); //sample text for now

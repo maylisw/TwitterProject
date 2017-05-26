@@ -35,7 +35,7 @@ public class PartOfSpeech {
         ArrayList<Word> JJS = new ArrayList<>();
         ArrayList<Word> VBD = new ArrayList<>();
         ArrayList<Word> VBN = new ArrayList<>();
-        MaxentTagger tagger = new MaxentTagger("taggers/english-left3words-distsim.tagger");//model fie from their models
+        MaxentTagger tagger = new MaxentTagger("taggers/english-left3words-distsim.tagger");//model fie from their model
         ArrayList<ArrayList<HasWord>> sentences = (ArrayList) MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
@@ -45,7 +45,9 @@ public class PartOfSpeech {
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
+                    //gets to here
                     if(words.get(current).equals(targetedWord)){
+                        //never gets here
                         if(tag.equals("NN")){
                             NN.add(words.get(current));
                             current ++;
@@ -106,10 +108,11 @@ public class PartOfSpeech {
                             current ++;
                             w--;
                         }
+                        System.out.println(w);
                     }
                 }
             }
-
+            System.out.println("I love you");
         }
         POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
         return p;
