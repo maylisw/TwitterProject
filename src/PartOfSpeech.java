@@ -41,7 +41,7 @@ public class PartOfSpeech {
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
             int w = words.size();
-            int current = 1;
+            int current = 50;
             while(w > 0){
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
@@ -109,6 +109,7 @@ public class PartOfSpeech {
                             current ++;
                             w--;
                         }
+                        System.out.println(current);
                     }
                 }
             }

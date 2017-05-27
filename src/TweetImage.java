@@ -1,9 +1,9 @@
-import javax.swing.*;
+//import javax.swing.*;
 
 /**
  * Created by princ on 24/05/2017.
  */
-public class TweetImage {
+/*public class TweetImage {
     private String tweet = "";
     Icon picture;
     int position;
@@ -24,3 +24,4 @@ public class TweetImage {
 
     }
 }
+*/
