@@ -10,10 +10,14 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        //String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + /*URL User Input*/ "&output=text";
-        String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
-        URLReader url = new URLReader("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text"); //sample text for now
-        String HTMLCode = url.readerReturn("http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text");
+        UserInput userInput = new UserInput();
+        System.out.print("What article do you want to make Trump react to? --> ");
+        String link = userInput.getString();
+        String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
+        System.out.print(realURL);
+        //String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
+        URLReader url = new URLReader(realURL); //sample text for now
+        String HTMLCode = url.readerReturn(realURL);
         HTMLtoPlainText html = new HTMLtoPlainText();
         String plainText = html.replace(HTMLCode);
         TextTOSortedArray obj = new TextTOSortedArray(plainText);
@@ -27,7 +31,7 @@ public class TweetTweet {
         ArrayList<Word> wordList = obj2.listed();
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
 
-        PositiveNegative posNeg = new PositiveNegative(boilerPipeURL);
+        PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
 
         POSArrayLists taggedLists = p.tagging();
@@ -40,11 +44,11 @@ public class TweetTweet {
         MadLibs madLibs = new MadLibs(0.4, s); //tester MadLibs object
         String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6
         System.out.print(tweet);
-        Icon image = new ImageIcon("TrumpTweetPage.png");
+        /*Icon image = new ImageIcon("TrumpTweetPage.png");
         int w = image.getIconWidth();
         int h = image.getIconHeight();
         JLabel imageTweet = new JLabel(tweet, image, JLabel.CENTER);
         imageTweet.setIcon(image);
-        System.out.print(imageTweet); //printing out info at JLabel imageTweet
+        System.out.print(imageTweet); //printing out info at JLabel imageTweet*/
     }
 }

@@ -12,9 +12,9 @@
         this.tweet = tweet;
         this.picture = picture;
         this.position = position;
-    }
+    }*/
 
-    public JLabel makeJLabel(){
+    /*public JLabel makeJLabel(){
         JLabel jLabel = new JLabel("tweet", picture, position);
         JFrame frame = new JFrame();
         jLabel.setIcon(picture);
@@ -22,6 +22,5 @@
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-    }
-}
-*/
+    }*/
+//}

@@ -11,11 +11,8 @@
 
  #####Issues
  - Debug tagging (maylis)
- - Positive vs Negative (caroline) (done)
- - Get image (j-labels)(maylis)
- - Debug MadLibs --> isn't running through all cases (caroline)
- - User Input? (caroline?)
- - twitter API
+ - Get image (j-labels)(maylis/caroline)
+ - twitter API (caroline)
  - Create new tweets and more detail?
  
  #####Positive and Negative
