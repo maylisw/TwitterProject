@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        UserInput userInput = new UserInput();
+        /*UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
         String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
@@ -37,7 +37,7 @@ public class TweetTweet {
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists, goodBad);
         String [][] filled = c.fill(taggedLists);
-        double d = c.getTemplate();
+        double d = c.getTemplate();*/
         //MadLibs madLibs = new MadLibs(d, filled);
         //String tweet = madLibs.getTweet();
         String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
@@ -45,6 +45,10 @@ public class TweetTweet {
         String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6
         System.out.print(tweet);
         /*Icon image = new ImageIcon("TrumpTweetPage.png");
+        TweetImage tweetImage = new TweetImage(tweet, image, JLabel.CENTER);
+        JFrame jFrame = tweetImage.makeJLabel();*/
+
+        /*System.out.print(jFrame);
         int w = image.getIconWidth();
         int h = image.getIconHeight();
         JLabel imageTweet = new JLabel(tweet, image, JLabel.CENTER);

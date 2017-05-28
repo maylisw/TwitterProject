@@ -1,9 +1,9 @@
-//import javax.swing.*;
+import javax.swing.*;
 
 /**
  * Created by princ on 24/05/2017.
  */
-/*public class TweetImage {
+public class TweetImage {
     private String tweet = "";
     Icon picture;
     int position;
@@ -12,15 +12,17 @@
         this.tweet = tweet;
         this.picture = picture;
         this.position = position;
-    }*/
+    }
 
-    /*public JLabel makeJLabel(){
+    public JFrame makeJLabel(){
         JLabel jLabel = new JLabel("tweet", picture, position);
         JFrame frame = new JFrame();
         jLabel.setIcon(picture);
-        frame.setSize(picture.getIconWidth(), picture.getIconHeight());
+        //frame.setSize(picture.getIconWidth(), picture.getIconHeight());
+        frame.setContentPane(jLabel);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        return frame;
 
-    }*/
-//}
+    }
+}
