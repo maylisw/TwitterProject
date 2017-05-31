@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        /*UserInput userInput = new UserInput();
+        UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
         String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
@@ -20,7 +20,7 @@ public class TweetTweet {
         String HTMLCode = url.readerReturn(realURL);
         HTMLtoPlainText html = new HTMLtoPlainText();
         String plainText = html.replace(HTMLCode);
-        TextTOSortedArray obj = new TextTOSortedArray(plainText);
+        /*TextTOSortedArray obj = new TextTOSortedArray(plainText);
         String[] tokenArray = obj.tokenize();
         String[] tokenArray2 = obj.punctuationRemoval(tokenArray);
         String[] tokenArray3 = obj.punctuationRemoval(tokenArray2);
@@ -40,8 +40,10 @@ public class TweetTweet {
         double d = c.getTemplate();*/
         //MadLibs madLibs = new MadLibs(d, filled);
         //String tweet = madLibs.getTweet();
+        //TextTOSortedArray tester = new TextTOSortedArray(plainText);
+        //String[] s = tester.tokenize();
         String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
-        MadLibs madLibs = new MadLibs(0.4, s); //tester MadLibs object
+        MadLibs madLibs = new MadLibs(0.6, s); //tester MadLibs object
         String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6
         System.out.print(tweet);
         /*Icon image = new ImageIcon("TrumpTweetPage.png");
