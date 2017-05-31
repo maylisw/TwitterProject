@@ -41,79 +41,112 @@ public class PartOfSpeech {
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
             int w = words.size();
-            int current = 50;
+            int current = 0;
+            int total = 0;
             while(w > 0){
+                int temp = current;
+                int temp2 = w;
+                /*System.out.println(current);
+                System.out.println(w);*/
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                    System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
+                   // System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
                     if(words.get(current).getWord().equals(targetedWord.toLowerCase())){
-                        System.out.println("WORD MATCH!!!");
-                        if(tag.equals("NN")){
-                            NN.add(words.get(current));
-                            current ++;
-                            w--;
+                        switch(tag)
+                        {
+                            case "NN":
+                                NN.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "NNS":
+                                NNS.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "VB":
+                                VB.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "VBP":
+                                VBP.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "VBZ":
+                                VBZ.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "NNP":
+                                NNP.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "NNPS":
+                                NNPS.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "JJ":
+                                JJ.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "JJR":
+                                JJR.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "JJS":
+                                JJS.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "VBD":
+                                VBD.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            case "VBN":
+                                VBN.add(words.get(current));
+                                current ++;
+                                w--;
+                                total ++;
+                                break;
+                            default:
+                                current ++;
+                                break;
                         }
-                        else if(tag.equals("NNS")){
-                            NNS.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("VB")){
-                            VB.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("VBP")){
-                            VBP.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("VBZ")){
-                            VBZ.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("NNP")){
-                            NNP.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("NNPS")){
-                            NNPS.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("JJ")){
-                            JJ.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("JJR")){
-                            JJR.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("JJS")){
-                            JJS.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        else if(tag.equals("VBD")){
-                            VBD.add(words.get(current));
-                            current++;
-                            w--;
-                        }
-                        else if(tag.equals("VBN")){
-                            VBN.add(words.get(current));
-                            current ++;
-                            w--;
-                        }
-                        System.out.println(current);
+                        //System.out.println(current);
                     }
                 }
+                if(temp == current && current < words.size()-1)
+                {
+                    current ++;
+                }
+                if(temp2 == w && w > 0)
+                {
+                    w--;
+                }
             }
-            System.out.println(" done with while loop");
+            System.out.println(total);
+            System.out.println(current);
+            System.out.println(w);
+            System.out.println(words.size());
         }
         System.out.print("done");
         POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);

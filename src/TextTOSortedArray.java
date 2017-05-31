@@ -19,6 +19,8 @@ public class TextTOSortedArray {
      */
     public String[] tokenize() {
         String[] words = paragraph.split(" ");
+        return words;
+        /*String[] words = paragraph.split(" ");
         ArrayList<String> temp = new ArrayList<>();
         int l = words.length;
         for(int i = 0; i < l; i++){
@@ -34,7 +36,7 @@ public class TextTOSortedArray {
             onlyWords[x] = s;
             x++;
         }
-        return onlyWords;
+        return onlyWords;*/
     }
     public String[] punctuationRemoval(String[] s){
         for(int i = 0; i < s.length; i++) { //Go through all words
