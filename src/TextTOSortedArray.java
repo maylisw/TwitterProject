@@ -25,16 +25,27 @@ public class TextTOSortedArray {
         int l = words.length;
         for(int i = 0; i < l; i++){
             String w = words[i];
-            if(w.matches("[a-zA-Z]+")){
-                temp.add(w);
+            String w2 = w.toUpperCase();
+            char c = w2.charAt(0);
+            for(char alphabet = 'A'; alphabet <= 'Z';alphabet++){
+                if(c == alphabet){
+                    temp.add(w);
+                    //System.out.print(w);
+
+                /*
+                    for(char alphabet = 'A'; alphabet <= 'Z';alphabet++) {
+                    System.out.println(alphabet);
+                    }
+                    "[a-zA-Z]+"
+                 */
+                }
             }
         }
         int size = temp.size();
         String[] onlyWords = new String[size];
-        for(String s : temp){
-            int x = 0;
-            onlyWords[x] = s;
-            x++;
+        for(int i = 0; i < size; i++){
+            onlyWords[i] = temp.get(i);
+            //System.out.print(i + " " + onlyWords[i]);
         }
         return onlyWords;*/
     }
