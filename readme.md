@@ -11,8 +11,8 @@
 
  #####Issues
  - Debug tagging (maylis)
- - Get image (j-labels)(maylis/caroline)
- - twitter API (caroline) --> I'm going to work on that because I hate JLabels. I'll work on that part in class.
+ - Get image (j-labels)(maylis)
+ - twitter API (maylis)
  - Create new tweets and more detail?
  
  #####Positive and Negative

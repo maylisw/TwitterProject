@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        UserInput userInput = new UserInput();
+        /*UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
         String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
@@ -20,7 +20,7 @@ public class TweetTweet {
         String HTMLCode = url.readerReturn(boilerPipeURL);
         HTMLtoPlainText html = new HTMLtoPlainText();
         String plainText = html.replace(HTMLCode);
-        /*TextTOSortedArray obj = new TextTOSortedArray(plainText);
+        TextTOSortedArray obj = new TextTOSortedArray(plainText);
         String[] tokenArray = obj.tokenize();
         String[] tokenArray2 = obj.punctuationRemoval(tokenArray);
         String[] tokenArray3 = obj.punctuationRemoval(tokenArray2);
