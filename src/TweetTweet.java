@@ -10,14 +10,14 @@ import java.util.ArrayList;
  */
 public class TweetTweet {
     public static void main(String[] args) {
-        /*UserInput userInput = new UserInput();
+        UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
         String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
-        System.out.print(realURL);*/
-        String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
-        URLReader url = new URLReader(boilerPipeURL); //sample text for now
-        String HTMLCode = url.readerReturn(boilerPipeURL);
+        System.out.println(realURL);
+        //String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
+        URLReader url = new URLReader(realURL); //sample text for now
+        String HTMLCode = url.readerReturn(realURL);
         HTMLtoPlainText html = new HTMLtoPlainText();
         String plainText = html.replace(HTMLCode);
         TextTOSortedArray obj = new TextTOSortedArray(plainText);
@@ -31,20 +31,20 @@ public class TweetTweet {
         ArrayList<Word> wordList = obj2.listed();
         PartOfSpeech p = new PartOfSpeech(wordList, plainText);
 
-        PositiveNegative posNeg = new PositiveNegative(boilerPipeURL);
+        PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
 
         POSArrayLists taggedLists = p.tagging();
         Chosen c = new Chosen(taggedLists, goodBad);
         String [][] filled = c.fill(taggedLists);
         double d = c.getTemplate();
-        //MadLibs madLibs = new MadLibs(d, filled);
-        //String tweet = madLibs.getTweet();
+        MadLibs madLibs = new MadLibs(d, filled);
+        String tweet = madLibs.getTweet();
         //TextTOSortedArray tester = new TextTOSortedArray(plainText);
         //String[] s = tester.tokenize();
-        String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
+        /*String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
         MadLibs madLibs = new MadLibs(0.6, s); //tester MadLibs object
-        String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6
+        String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6*/
         System.out.print(tweet);
         /*Icon image = new ImageIcon("TrumpTweetPage.png");
         TweetImage tweetImage = new TweetImage(tweet, image, JLabel.CENTER);

@@ -46,12 +46,12 @@ public class PartOfSpeech {
             while(w > 0){
                 int temp = current;
                 int temp2 = w;
-                /*System.out.println(current);
-                System.out.println(w);*/
+                //System.out.println(current);
+                //System.out.println(w);
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                   // System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
+                   System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
                     if(words.get(current).getWord().equals(targetedWord.toLowerCase())){
                         switch(tag)
                         {

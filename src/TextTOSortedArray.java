@@ -21,10 +21,13 @@ public class TextTOSortedArray {
         String[] words = paragraph.split(" ");
         ArrayList<String> temp = new ArrayList<>();
         int l = words.length;
+        //System.out.print(l);
         for(int i = 0; i < l; i++){
             String w = words[i];
+            //System.out.print(w);
             String w2 = w.toUpperCase();
             char c = w2.charAt(0);
+            //System.out.print(c + " " + i);
             for(char alphabet = 'A'; alphabet <= 'Z';alphabet++) {
                 if (c == alphabet) {
                     temp.add(w);
@@ -51,7 +54,7 @@ public class TextTOSortedArray {
             String temp = s[i]; //create variable housing string at index i
             if (temp.length() > 0) {
                 String last = temp.substring(temp.length() - 1, temp.length()); //last char in the string at i
-                if (!StringUtils.isAlphanumeric(last) || last.equals("")) //if not alpha numeric
+                if (!StringUtils.isAlphanumeric(last) || last.equals(".")) //if not alpha numeric
                 {
                     String fin = temp.substring(0, temp.length() - 1);  //remove last digits
                     s[i] = fin; //set new edited string to index i
@@ -75,4 +78,6 @@ public class TextTOSortedArray {
         }
         return s;
     }
+
+    //public String[] middlePeriodRemoval
 }

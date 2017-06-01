@@ -8,12 +8,12 @@ public class PositiveNegative {
 
     public PositiveNegative(String url){
         //locate first www and cut off from that to the &output=text to isolate URL (until userInput works
-        int firstWWW = url.indexOf("www");
-        int firstBoilerPipe = url.indexOf("&output=text");
-        url = url.substring(firstWWW, firstBoilerPipe);
         if(url.contains("tigernewspaper")){
             url = "www." + url;
         }
+        int firstWWW = url.indexOf("www");
+        int firstBoilerPipe = url.indexOf("&output=text");
+        url = url.substring(firstWWW, firstBoilerPipe);
         int firstDot = url.indexOf(".");
         //System.out.print(firstDot);
         url = url.substring(firstDot + 1);
