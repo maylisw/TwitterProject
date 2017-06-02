@@ -41,7 +41,9 @@ public class PartOfSpeech {
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
             int w = words.size();
-            int current = 0;
+            int w2 = w;
+            int current = w - w2;
+            //int current = 0;
             int total = 0;
             while(w > 0 /*|| need to cut off the loop before it reaches the end*/){
                 int temp = current;
@@ -49,39 +51,43 @@ public class PartOfSpeech {
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                    System.out.print(current + " " + w);
+                    //System.out.print(current + " " + w);
                     System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
                     if(words.get(current).getWord().toLowerCase().equals(targetedWord.toLowerCase())){
                         switch(tag)
                         {
                             case "NN":
                                 NN.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "NNS":
                                 NNS.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "VB":
                                 VB.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "VBP":
                                 VBP.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
                                 total ++;
                                 break;
                             case "VBZ":
                                 VBZ.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "NNP":
@@ -92,42 +98,49 @@ public class PartOfSpeech {
                                 break;
                             case "NNPS":
                                 NNPS.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "JJ":
                                 JJ.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "JJR":
                                 JJR.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "JJS":
                                 JJS.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "VBD":
                                 VBD.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             case "VBN":
                                 VBN.add(words.get(current));
-                                current ++;
+                                //current ++;
                                 w--;
+                                w2++;
                                 total ++;
                                 break;
                             default:
-                                current ++;
+                                //current ++;
+                                w2++;
                                 break;
                         }
                         //System.out.println(current);

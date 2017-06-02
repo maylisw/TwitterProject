@@ -5,6 +5,7 @@ import java.util.ArrayList;
  */
 public class Chosen {
     private String[][] keyWords = new String[12][1]; //currently largest # to fill per tweet is 3; later make separate
+    ArrayList[] s = new ArrayList[12]; //create an instance variable --> check if array is null or empty in isFilled.
     private double d;
     private boolean yesNo;
 
@@ -64,8 +65,9 @@ public class Chosen {
             cols = keyWords[row].length;
             ArrayList<Word> ws = s[row];
             for(int col = 0; col < cols; col++){
-                Word w = ws.get(col);
-                keyWords[row][col] = w.getWord();
+                 Word w = ws.get(col);
+                System.out.println(col + " " + cols);
+                 keyWords[row][col] = w.getWord();
             }
         }
         return keyWords;
@@ -73,6 +75,14 @@ public class Chosen {
 
     public double getTemplate(){
         return d;
+    }
+
+    public boolean isFilled(){
+        ArrayList<ArrayList<Word>> aL = new ArrayList<>();
+        int i = 0;
+        while(i < 12){
+            aL.add(this.);
+        }
     }
 
 }
