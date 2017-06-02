@@ -43,16 +43,15 @@ public class PartOfSpeech {
             int w = words.size();
             int current = 0;
             int total = 0;
-            while(w > 0){
+            while(w > 0 /*|| need to cut off the loop before it reaches the end*/){
                 int temp = current;
                 int temp2 = w;
-                //System.out.println(current);
-                //System.out.println(w);
                 for (TaggedWord targeted : tagWords){
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
-                   System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
-                    if(words.get(current).getWord().equals(targetedWord.toLowerCase())){
+                    System.out.print(current + " " + w);
+                    System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
+                    if(words.get(current).getWord().toLowerCase().equals(targetedWord.toLowerCase())){
                         switch(tag)
                         {
                             case "NN":

@@ -26,6 +26,15 @@ public class TextTOSortedArray {
             String w = words[i];
             //System.out.print(w);
             String w2 = w.toUpperCase();
+            for(int k = i; k < i + 3; k++){
+                if(!(w.equals(" "))){
+                    w = words[k + 1];
+                    w2 = w.toUpperCase();
+                    System.out.print(w + " " + w2 + " ");
+                }
+                System.out.println(k + " " + i + " ");
+            }
+            //System.out.println(w.length() + w);
             char c = w2.charAt(0);
             //System.out.print(c + " " + i);
             for(char alphabet = 'A'; alphabet <= 'Z';alphabet++) {
