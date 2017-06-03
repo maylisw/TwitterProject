@@ -61,13 +61,22 @@ public class Chosen {
         ArrayList<Word> VBD = p.getPastTenseVerb();
         ArrayList<Word> VBN = p.getPastParticipleVerb();
         ArrayList[] s = {NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN}; //can create array of AL<Anything>
+        ArrayList<ArrayList<Word>> temp = new ArrayList<>();
+        for(int i = 0; i < 12; i++){
+            temp.add(s[i]);
+        }
         for(int row = 0; row < 12; row++){
             cols = keyWords[row].length;
             ArrayList<Word> ws = s[row];
             for(int col = 0; col < cols; col++){
-                 Word w = ws.get(col);
-                System.out.println(col + " " + cols);
-                 keyWords[row][col] = w.getWord();
+                 if(temp.get(row).isEmpty() != true) {
+                     Word w = ws.get(col);
+                     //System.out.println(w.getWord() + " " + col + " " + cols);
+                     keyWords[row][col] = w.getWord();
+                 }
+                 else{
+                     keyWords[row][col] = "TESTER";
+                 }
             }
         }
         return keyWords;
@@ -77,12 +86,12 @@ public class Chosen {
         return d;
     }
 
-    public boolean isFilled(){
+    /*public boolean isFilled(){
         ArrayList<ArrayList<Word>> aL = new ArrayList<>();
         int i = 0;
         while(i < 12){
             aL.add(this.);
         }
-    }
+    }*/
 
 }
