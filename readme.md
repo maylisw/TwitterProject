@@ -31,3 +31,8 @@
  - Chosen --> fill (String[][]), getTemplate (double; # of template), choosing tweet in constructor
  - MadLibs --> getTweet (String tweet), main filling of tweet in constructor
  - JLabel/JFrame OR ToTwitter --> bleh
+ 
+ #####Classes with Print Statements
+ - Loads in TextTOSortedArray --> figure out later for "proof"
+ - The infamous error in PartOfSpeech --> printing out the words
+ - Chosen --> the positions that it's running through

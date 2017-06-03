@@ -17,10 +17,10 @@ public class TweetTweet {
         System.out.println(realURL);
         //String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
         URLReader url = new URLReader(realURL); //sample text for now
-        String HTMLCode = url.readerReturn(realURL);
-        HTMLtoPlainText html = new HTMLtoPlainText();
-        String plainText = html.replace(HTMLCode);
-        TextTOSortedArray obj = new TextTOSortedArray(plainText);
+        String boilerPipe = url.readerReturn(realURL);
+        //HTMLtoPlainText html = new HTMLtoPlainText();
+        //String plainText = html.replace(HTMLCode);
+        TextTOSortedArray obj = new TextTOSortedArray(boilerPipe);
         String[] tokenArray = obj.tokenize();
         String[] tokenArray2 = obj.punctuationRemoval(tokenArray);
         String[] tokenArray3 = obj.punctuationRemoval(tokenArray2);
@@ -29,7 +29,7 @@ public class TweetTweet {
         Arrays.sort(betterTokenArray);
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
-        PartOfSpeech p = new PartOfSpeech(wordList, plainText);
+        PartOfSpeech p = new PartOfSpeech(wordList, boilerPipe);
 
         PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
