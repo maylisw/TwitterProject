@@ -36,7 +36,7 @@ public class PartOfSpeech {
         ArrayList<Word> JJS = new ArrayList<>();
         ArrayList<Word> VBD = new ArrayList<>();
         ArrayList<Word> VBN = new ArrayList<>();
-        MaxentTagger tagger = new MaxentTagger("taggers/english-left3words-distsim.tagger");//model fie from their model
+        MaxentTagger tagger = new MaxentTagger("taggers/english-left3words-distsim.tagger");//model file from their model
         ArrayList<ArrayList<HasWord>> sentences = (ArrayList) MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
         for (ArrayList<HasWord> sentence : sentences) {
             ArrayList<TaggedWord> tagWords = (ArrayList<TaggedWord>) tagger.tagSentence(sentence);
@@ -52,7 +52,7 @@ public class PartOfSpeech {
                     String targetedWord = targeted.value();
                     String tag = targeted.tag();
                     //System.out.print(current + " " + w);
-                    System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase());
+                    //System.out.println(words.get(current).getWord() + " " + targetedWord.toLowerCase()); can uncomment later
                     if(words.get(current).getWord().toLowerCase().equals(targetedWord.toLowerCase())){
                         switch(tag)
                         {
@@ -155,12 +155,13 @@ public class PartOfSpeech {
                     w--;
                 }
             }
-            System.out.println(total);
+            /*System.out.println(total);
             System.out.println(current);
             System.out.println(w);
             System.out.println(words.size());
+            can uncomment later*/
         }
-        System.out.print("done");
+        //System.out.print("done"); can uncomment later
         POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
         return p;
     }

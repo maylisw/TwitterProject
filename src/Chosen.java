@@ -71,7 +71,7 @@ public class Chosen {
             for(int col = 0; col < cols; col++){
                  if(temp.get(row).isEmpty() != true) {
                      Word w = ws.get(col);
-                     //System.out.println(w.getWord() + " " + col + " " + cols);
+                     //System.out.println(w.getWord() + " " + col + " " + cols); can uncomment later
                      keyWords[row][col] = w.getWord();
                  }
                  else{
