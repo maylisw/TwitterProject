@@ -10,10 +10,9 @@
 9. Text of tweet -> Image and tweet using twitter API?
 
  #####Issues
- - Debug tagging (maylis)
- - Get image (j-labels)(maylis)
- - twitter API (maylis)
- - Create new tweets and more detail?
+ - Get image (j-labels) or twitter API (maylis)
+ - Create new tweets and more detail? (Caroline)
+ - Include more tagged versions of POS and condense.
  
  #####Positive and Negative
  - Positive: Breitbart, Fox News
