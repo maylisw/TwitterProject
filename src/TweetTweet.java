@@ -52,6 +52,8 @@ public class TweetTweet {
         double d = c.getTemplate();
         MadLibs madLibs = new MadLibs(d, filled);
         String tweet = madLibs.getTweet();
+        System.out.println(tweet);
+
         //TextTOSortedArray tester = new TextTOSortedArray(plainText);
         //String[] s = tester.tokenize();
         /*String[][] s = {{"hi", "me", "what even"}, {"boom", "boo", "hello"}, {"When", "the", "home"}, {"And", "window", "close"}, {"their", "shutters", "One"}, {"by", "one", "oil"}, {"lamps", "are", "blown"}, {"out", "Until", "dark"}, {"envelopes", "single", "flame"}, {"Pulsing", "softly", "hearth"}, {"wandering", "soul", "glimmers"}, {"base", "stairs", "nighttime"}};
