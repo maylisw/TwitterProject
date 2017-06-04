@@ -21,7 +21,7 @@ public class PositiveNegative {
         int secondDot = url.indexOf(".");
         //System.out.print(secondDot);
         news = url.substring(firstDot - 3, secondDot); // out of bounds error
-        //System.out.print(news);
+        System.out.println(news);
         if(news.equals("breitbart")|| news.equals("foxnews")){
             yesNo = true;
         }

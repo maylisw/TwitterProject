@@ -43,10 +43,11 @@ public class TweetTweet {
 
         PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
+        System.out.println(goodBad);
 
         POSArrayLists taggedLists = p.tagging();
 
-        Chosen c = new Chosen(taggedLists, goodBad);
+        Chosen c = new Chosen(goodBad);
         String [][] filled = c.fill(taggedLists);
 
         double d = c.getTemplate();

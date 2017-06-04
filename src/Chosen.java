@@ -9,31 +9,36 @@ public class Chosen {
     private double d;
     private boolean yesNo;
 
-    public Chosen(POSArrayLists p, boolean yesNo){
+    public Chosen( boolean y){
         d = Math.random();
-        this.yesNo = yesNo;
-        if(yesNo = false){
-            d = Math.random();
+        yesNo = y;
+        if(yesNo == false){
+            System.out.println(d);
             if(d >= 0 && d < 0.2){
                 keyWords[1] = new String[1];
                 keyWords[4] = new String[1];
+                System.out.println("0 &.2");
             }
             else if(d >= 0.2 && d < 0.4){
                 keyWords[8] = new String[1];
                 keyWords[5] = new String[1];
                 keyWords[0] = new String[1];
+                System.out.println(".2 &.4");
             }
             else if(d >= 0.4 && d < 0.6){
                 keyWords[5] = new String[1];
                 keyWords[6] = new String[1];
                 keyWords[1] = new String[1];
+                System.out.println(".4 &.6");
             }
             else if(d >= 0.6 && d < 0.8){
                 keyWords[6] = new String[1];
                 keyWords[10] = new String[1];
+                System.out.println(".6 &.8");
             }
             else{
                 keyWords[10] = new String[1];
+                System.out.println(".8 & 1");
             }
         }
         else {
