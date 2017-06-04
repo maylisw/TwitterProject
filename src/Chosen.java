@@ -10,7 +10,7 @@ public class Chosen {
     private boolean yesNo;
 
     public Chosen(POSArrayLists p, boolean yesNo){
-        //d = Math.random();
+        d = Math.random();
         this.yesNo = yesNo;
         if(yesNo = false){
             d = Math.random();
