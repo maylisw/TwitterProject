@@ -46,7 +46,7 @@ public class MadLibs {
 
         }
         else {
-            tweet = "Finally a news outlet that is reporting the truth, " + words[6][0] + " is " + words[7][0] + ". " + "Very true!";
+            tweet = "Finally a news outlet that is reporting the truth, " + words[6][0] + " are " + words[7][0] + ". " + "Very true!";
             //positive
         }
 
