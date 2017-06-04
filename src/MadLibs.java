@@ -20,8 +20,7 @@ public class MadLibs {
 
     public MadLibs(double n, String[][] words)
     {
-        int k = (int) (n*5 +1);
-        //System.out.print(k);
+        int k = (int) n;
         if(k >= 1 && k < 6){
             switch(k)
             {
@@ -40,7 +39,7 @@ public class MadLibs {
                     tweet = "Reports that " + words[6][0] + " " + words[10][0] + " by CNN are completely untrue - FAKE NEWS!";
                     break;
                 case 5: //negative
-                    tweet = "Nobody should be allowed to " + words[10][0] + "! Wrong wrong wrong!";
+                    tweet = "Nobody should be allowed to be " + words[10][0] + "! Wrong wrong wrong!";
                     break;
             }
 

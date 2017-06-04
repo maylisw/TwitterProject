@@ -7,7 +7,7 @@
 6. ~~ArrayList<Word(#, string)> -> ArrayList<Word> by part of speech~~
 7. ~~ArrayList<Word> by part of speech -> 2D array of Strings by part of speech~~
 8. ~~2D + templetes -> Text of tweet~~
-9. Text of tweet -> Image and tweet using twitter API?
+9. ~~Text of tweet -> Image and tweet using twitter API?~~
 
  #####Issues
  - Get image (j-labels) or twitter API (maylis)
