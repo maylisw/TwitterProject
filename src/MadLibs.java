@@ -22,7 +22,7 @@ public class MadLibs {
     public MadLibs(double n, String[][] words, String outlet)
     {
         int k = (int)(n * 5 + 1);
-        System.out.println(k);
+        //System.out.println(k);
         if(k >= 1 && k < 6){
             switch(k)
             {

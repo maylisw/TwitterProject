@@ -13,32 +13,32 @@ public class Chosen {
         d = Math.random();
         yesNo = y;
         if(yesNo == false){
-            System.out.println(d);
+            //System.out.println(d);
             if(d >= 0 && d < 0.2){
                 keyWords[1] = new String[1];
                 keyWords[4] = new String[1];
-                System.out.println("0 &.2");
+                //System.out.println("0 &.2");
             }
             else if(d >= 0.2 && d < 0.4){
                 keyWords[8] = new String[1];
                 keyWords[5] = new String[1];
                 keyWords[0] = new String[1];
-                System.out.println(".2 &.4");
+                //System.out.println(".2 &.4");
             }
             else if(d >= 0.4 && d < 0.6){
                 keyWords[5] = new String[1];
                 keyWords[6] = new String[1];
                 keyWords[1] = new String[1];
-                System.out.println(".4 &.6");
+                //System.out.println(".4 &.6");
             }
             else if(d >= 0.6 && d < 0.8){
                 keyWords[6] = new String[1];
                 keyWords[10] = new String[1];
-                System.out.println(".6 &.8");
+                //System.out.println(".6 &.8");
             }
             else{
                 keyWords[10] = new String[1];
-                System.out.println(".8 & 1");
+                //System.out.println(".8 & 1");
             }
         }
         else {
