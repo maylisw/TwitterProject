@@ -48,6 +48,11 @@ public class PositiveNegative {
         } //we've got to think of a better strategy for +/-
     }
     public boolean whichTemplate(){
+
         return yesNo;
+    }
+
+    public String whichNews(){
+        return news;
     }
 }

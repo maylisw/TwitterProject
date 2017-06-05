@@ -5,6 +5,7 @@ import java.util.ArrayList;
  */
 public class MadLibs {
     private String tweet;
+    private String outlet;
     /*private int numberOfSingularNouns; 0
     private int numberOfPluralNouns; 1
     private int numberOfInfiniteVerbs; 2
@@ -18,14 +19,15 @@ public class MadLibs {
     private int numberOfPastTenseVerbs; 10
     private int numberOfPastParticipleVerbs; 11*/
 
-    public MadLibs(double n, String[][] words)
+    public MadLibs(double n, String[][] words, String outlet)
     {
-        int k = (int) n;
+        int k = (int)(n * 5 + 1);
+        System.out.println(k);
         if(k >= 1 && k < 6){
             switch(k)
             {
                 case 1: //negative
-                    tweet = "The real problem is that " + words[1][0] + " " + words[4][0] + "! Very un-American!";
+                    tweet = "The real problem is that " + words[1][0] + " " + words[3][0] + "! Very un-American!";
                     break;
                 case 2: //negative
                     tweet = "Despite the efforts of " + words[8][0] + " " + words[5][0] + " to stop us, " + words[0][0] + " is moving quickly!";
@@ -36,7 +38,7 @@ public class MadLibs {
                     tweet = w.substring(0, 1).toUpperCase() + w.substring(1, l) + " just stated that " + words[6][0] + " " + words[1][0] + ". Very untrue!";
                     break;
                 case 4: //ONLY for CNN!!! negative
-                    tweet = "Reports that " + words[6][0] + " " + words[10][0] + " by CNN are completely untrue - FAKE NEWS!";
+                    tweet = "Reports that " + words[6][0] + " " + words[10][0] + " by " + outlet + " are completely untrue - FAKE NEWS!";
                     break;
                 case 5: //negative
                     tweet = "Nobody should be allowed to be " + words[10][0] + "! Wrong wrong wrong!";

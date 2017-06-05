@@ -14,7 +14,7 @@ import twitter4j.TwitterException;
  * Main class: 2D Array --> Tweet --> Image --> Twitter
  */
 public class TweetTweet {
-    public static void main(String[] args) throws TwitterException {
+    public static void main(String[] args) /*throws TwitterException*/ {
         UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
@@ -43,6 +43,7 @@ public class TweetTweet {
 
         PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
+        String s = posNeg.whichNews();
         System.out.println(goodBad);
 
         POSArrayLists taggedLists = p.tagging();
@@ -51,7 +52,8 @@ public class TweetTweet {
         String [][] filled = c.fill(taggedLists);
 
         double d = c.getTemplate();
-        MadLibs madLibs = new MadLibs(d, filled);
+        System.out.println(d);
+        MadLibs madLibs = new MadLibs(d, filled, s);
         String tweet = madLibs.getTweet();
         System.out.println(tweet);
 
