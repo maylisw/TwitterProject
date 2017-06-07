@@ -36,6 +36,10 @@ public class PartOfSpeech {
         ArrayList<Word> JJS = new ArrayList<>();
         ArrayList<Word> VBD = new ArrayList<>();
         ArrayList<Word> VBN = new ArrayList<>();
+        ArrayList<Word> MD = new ArrayList<>();
+        ArrayList<Word> PRP$ = new ArrayList<>();
+        ArrayList<Word> UH = new ArrayList<>();
+        ArrayList<Word> RB = new ArrayList<>();
         MaxentTagger tagger = new MaxentTagger("taggers/english-left3words-distsim.tagger");//model file from their model
         ArrayList<ArrayList<HasWord>> sentences = (ArrayList) MaxentTagger.tokenizeText(new BufferedReader(new StringReader(paragraph)));
         for (ArrayList<HasWord> sentence : sentences) {
@@ -138,6 +142,34 @@ public class PartOfSpeech {
                                 w2++;
                                 total ++;
                                 break;
+                            case "MD":
+                                MD.add(words.get(current));
+                                //current ++;
+                                w--;
+                                w2++;
+                                total ++;
+                                break;
+                            case "PRP$":
+                                PRP$.add(words.get(current));
+                                //current ++;
+                                w--;
+                                w2++;
+                                total ++;
+                                break;
+                            case "UH":
+                                UH.add(words.get(current));
+                                //current ++;
+                                w--;
+                                w2++;
+                                total ++;
+                                break;
+                            case "RB":
+                                RB.add(words.get(current));
+                                //current ++;
+                                w--;
+                                w2++;
+                                total ++;
+                                break;
                             default:
                                 //current ++;
                                 w2++;
@@ -162,7 +194,7 @@ public class PartOfSpeech {
             can uncomment later*/
         }
         //System.out.print("done"); can uncomment later
-        POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN);
+        POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN, MD, PRP$, UH, RB);
         return p;
     }
 }

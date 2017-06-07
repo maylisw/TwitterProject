@@ -14,7 +14,7 @@ import twitter4j.TwitterException;
  * Main class: 2D Array --> Tweet --> Image --> Twitter
  */
 public class TweetTweet {
-    public static void main(String[] args) /*throws TwitterException*/ {
+    public static void main(String[] args) throws TwitterException {
         UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();

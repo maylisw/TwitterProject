@@ -10,9 +10,9 @@
 9. ~~Text of tweet -> Image and tweet using twitter API?~~
 
  #####Issues
- - Get image (j-labels) or twitter API (maylis)
  - Create new tweets and more detail? (Caroline)
  - Include more tagged versions of POS and condense.
+ - Issues in Chosen with new get methods --> Maylis can you take a look at it?
  
  #####Positive and Negative
  - Positive: Breitbart, Fox News
@@ -30,7 +30,7 @@
  - POSArrayLists --> constructor only w/ ArrayList of 12 ArrayLists of Word objects (word, times found)
  - Chosen --> fill (String[][]), getTemplate (double; # of template), choosing tweet in constructor
  - MadLibs --> getTweet (String tweet), main filling of tweet in constructor
- - JLabel/JFrame OR ToTwitter --> bleh
+ - ToTwitter --> bleh
  
  #####Classes with Print Statements
  - Loads in TextTOSortedArray --> figure out later for "proof"

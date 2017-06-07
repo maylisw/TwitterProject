@@ -18,7 +18,11 @@ public class POSArrayLists{
     private ArrayList<Word> superlativeAdjectives;
     private ArrayList<Word> pastTenseVerb;
     private ArrayList<Word> pastParticipleVerb;
-    public POSArrayLists(ArrayList<Word> w1, ArrayList<Word> w2, ArrayList<Word> w3, ArrayList<Word> w4, ArrayList<Word> w5, ArrayList<Word> w6, ArrayList<Word> w7, ArrayList<Word> w8, ArrayList<Word> w9, ArrayList<Word> w10, ArrayList<Word> w11, ArrayList<Word> w12){
+    private ArrayList<Word> modalVerb;
+    private ArrayList<Word> possessivePronoun;
+    private ArrayList<Word> interjection;
+    private ArrayList<Word> adverb;
+    public POSArrayLists(ArrayList<Word> w1, ArrayList<Word> w2, ArrayList<Word> w3, ArrayList<Word> w4, ArrayList<Word> w5, ArrayList<Word> w6, ArrayList<Word> w7, ArrayList<Word> w8, ArrayList<Word> w9, ArrayList<Word> w10, ArrayList<Word> w11, ArrayList<Word> w12, ArrayList<Word> w13, ArrayList<Word> w14, ArrayList<Word> w15, ArrayList<Word> w16){
         singularNoun = w1;
         pluralNoun = w2;
         infiniteVerb = w3;
@@ -31,6 +35,10 @@ public class POSArrayLists{
         superlativeAdjectives = w10;
         pastTenseVerb = w11;
         pastParticipleVerb = w12;
+        modalVerb = w13;
+        possessivePronoun = w14;
+        interjection = w15;
+        adverb = w16;
     }
 
     public ArrayList<Word> getSingularNoun() {
@@ -77,5 +85,21 @@ public class POSArrayLists{
 
     public ArrayList<Word> getPastParticipleVerb() {
         return pastParticipleVerb;
+    }
+
+    public ArrayList<Word> getModalVerb(){
+        return modalVerb;
+    }
+
+    public ArrayList<Word> getPossessivePronoun() {
+        return possessivePronoun;
+    }
+
+    public ArrayList<Word> getInterjection() {
+        return interjection;
+    }
+
+    public ArrayList<Word> getAdverb() {
+        return adverb;
     }
 }

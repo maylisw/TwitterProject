@@ -23,7 +23,7 @@ public class MadLibs {
     {
         int k = (int)(n * 5 + 1);
         //System.out.println(k);
-        if(k >= 1 && k < 6){
+        if(k >= 1 && k < 10){
             switch(k)
             {
                 case 1: //negative
@@ -42,6 +42,18 @@ public class MadLibs {
                     break;
                 case 5: //negative
                     tweet = "Nobody should be allowed to be " + words[10][0] + "! Wrong wrong wrong!";
+                    break;
+                case 6:
+                    tweet = "The liberals have been trying to smear my campaign - " + words[10][0] + " " + words[7][0] + " are being " + words[8][0] + "!" ;
+                    break;
+                case 7:
+                    tweet = "The " + words[7][0] + " are " + words[14][0] + " - " + words[15][0] + "! " + words[16][0].substring(0, 1).toUpperCase() + words[16][0].substring(1, words[16][0].length()) + " the " + words[10][0] + " " + words[7][1] + " out there!";
+                    break;
+                case 8:
+                    tweet = "To the " + words[8][0] + " " + words[1][0] + " out there, a " + words[1][1] + " " + words[13][0] + " " + words[4][0] + " today - NOT TRUE! Absolute lies!";
+                    break;
+                case 9:
+                    tweet = words[15][0] + "! We need to be " + words[8][0] + ", " + words[8][1] + ", and " + words[8][2] + ". We need the " + words[2][0] + " " + words[3][0] + " our " + words[2][1] + " now! No " + words[9][0] + " " + words[2][2] + "!";
                     break;
             }
 
