@@ -27,7 +27,7 @@ public class MadLibs {
     {
         int k = (int)(n * 9 + 1);
         System.out.println(k);
-        k = 8;
+        //k = 8;
         if(k >= 1 && k < 10){
             switch(k)
             {
