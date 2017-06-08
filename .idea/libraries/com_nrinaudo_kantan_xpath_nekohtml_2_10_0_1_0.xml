@@ -15,6 +15,19 @@
       <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/com/github/mpilquist/simulacrum_2.10/0.7.0/simulacrum_2.10-0.7.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/nrinaudo/kantan.xpath-nekohtml_2.10/0.1.0/kantan.xpath-nekohtml_2.10-0.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/nrinaudo/kantan.xpath_2.10/0.1.0/kantan.xpath_2.10-0.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/typelevel/export-hook_2.10/1.1.0/export-hook_2.10-1.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/typelevel/macro-compat_2.10/1.1.0/macro-compat_2.10-1.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalamacros/quasiquotes_2.10/2.1.0-M5/quasiquotes_2.10-2.1.0-M5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scoverage/scalac-scoverage-runtime_2.10/1.1.1/scalac-scoverage-runtime_2.10-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scoverage/scalac-scoverage-plugin_2.10/1.1.1/scalac-scoverage-plugin_2.10-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/mpilquist/simulacrum_2.10/0.7.0/simulacrum_2.10-0.7.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -107,7 +107,8 @@ public class Chosen {
             cols = ws.size();
             if(cols < 2){
                 for(int col = 0; col < cols - 1; col++){
-                    if(temp.get(row).isEmpty() != true) {
+                    Word wTest = ws.get(col);
+                    if(wTest != null){//temp.get(row).isEmpty() != true) {
                         System.out.println(col + " " + cols);
                         Word w = ws.get(col);
                         System.out.println(w.getWord() + " " + col + " " + cols);
@@ -120,7 +121,8 @@ public class Chosen {
             }
             else{
                 for(int col = 0; col < 2; col++){
-                    if(temp.get(row).isEmpty() != true) {
+                    Word wTest = ws.get(col);
+                    if(wTest != null) {
                         System.out.println(col + " " + cols);
                         Word w = ws.get(col);
                         System.out.println(w.getWord() + " " + col + " " + cols);
