@@ -187,12 +187,12 @@ public class PartOfSpeech {
                     w--;
                 }
             }
-            System.out.println(total);
+            /*System.out.println(total);
             System.out.println(current);
             System.out.println(w);
-            System.out.println(words.size());
+            System.out.println(words.size());*/
         }
-        System.out.print("done");
+        //System.out.print("done");
         POSArrayLists p = new POSArrayLists(NN, NNS, VB, VBP, VBZ, NNP, NNPS, JJ, JJR, JJS, VBD, VBN, MD, PRP$, UH, RB);
         return p;
     }

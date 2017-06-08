@@ -103,15 +103,15 @@ public class Chosen {
         for(int row = 0; row < 16; row++){
             //cols = keyWords[row].length - 1;
             ArrayList<Word> ws = s[row];
-            System.out.println(ws.size());
+            //System.out.println(ws.size());
             cols = ws.size();
             if(cols < 2){
                 for(int col = 0; col < cols - 1; col++){
                     Word wTest = ws.get(col);
                     if(wTest != null){//temp.get(row).isEmpty() != true) {
-                        System.out.println(col + " " + cols);
+                        //System.out.println(col + " " + cols);
                         Word w = ws.get(col);
-                        System.out.println(w.getWord() + " " + col + " " + cols);
+                        //System.out.println(w.getWord() + " " + col + " " + cols);
                         keyWords[row][col] = w.getWord();
                     }
                     else{
@@ -173,9 +173,9 @@ public class Chosen {
                 for(int col = 0; col < 2; col++){
                     Word wTest = ws.get(col);
                     if(wTest != null) {
-                        System.out.println(col + " " + cols);
+                        //System.out.println(col + " " + cols);
                         Word w = ws.get(col);
-                        System.out.println(w.getWord() + " " + col + " " + cols);
+                        //System.out.println(w.getWord() + " " + col + " " + cols);
                         keyWords[row][col] = w.getWord();
                     }
                     else{
