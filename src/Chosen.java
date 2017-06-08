@@ -115,7 +115,57 @@ public class Chosen {
                         keyWords[row][col] = w.getWord();
                     }
                     else{
-                        keyWords[row][col] = "LIES! YOUR FIRED!!!";
+                        switch(row) {
+                            case 0:
+                                keyWords[row][0] = "dolphin";
+                                break;
+                            case 1:
+                                keyWords[row][0] = "unicorns";
+                                break;
+                            case 2:
+                                keyWords[row][0] = "to be";
+                                break;
+                            case 3:
+                                keyWords[row][0] = "go";
+                                break;
+                            case 4:
+                                keyWords[row][0] = "goes";
+                                break;
+                            case 5:
+                                keyWords[row][0] = "Crooked Hillary";
+                                break;
+                            case 6:
+                                keyWords[row][0] = "Russians";
+                                break;
+                            case 7:
+                                keyWords[row][0] = "bad";
+                                break;
+                            case 8:
+                                keyWords[row][0] = "worse";
+                                break;
+                            case 9:
+                                keyWords[row][0] = "bestest";
+                                break;
+                            case 10:
+                                keyWords[row][0] = "ran";
+                                break;
+                            case 11:
+                                keyWords[row][0] = "gone";
+                                break;
+                            case 12:
+                                keyWords[row][0] = "like";
+                                break;
+                            case 13:
+                                keyWords[row][0] = "mine";
+                                break;
+                            case 14:
+                                keyWords[row][0] = "FAKE!!!";
+                                break;
+                            case 15:
+                                keyWords[row][0] = "goodly";
+                                break;
+                        }
+
                     }
                 }
             }
@@ -129,7 +179,56 @@ public class Chosen {
                         keyWords[row][col] = w.getWord();
                     }
                     else{
-                        keyWords[row][col] = "LIES! YOUR FIRED!!!";
+                        switch(row) {
+                            case 0:
+                                keyWords[row][0] = "dolphin";
+                                break;
+                            case 1:
+                                keyWords[row][0] = "unicorns";
+                                break;
+                            case 2:
+                                keyWords[row][0] = "to be";
+                                break;
+                            case 3:
+                                keyWords[row][0] = "go";
+                                break;
+                            case 4:
+                                keyWords[row][0] = "goes";
+                                break;
+                            case 5:
+                                keyWords[row][0] = "Crooked Hillary";
+                                break;
+                            case 6:
+                                keyWords[row][0] = "Russians";
+                                break;
+                            case 7:
+                                keyWords[row][0] = "bad";
+                                break;
+                            case 8:
+                                keyWords[row][0] = "worse";
+                                break;
+                            case 9:
+                                keyWords[row][0] = "bestest";
+                                break;
+                            case 10:
+                                keyWords[row][0] = "ran";
+                                break;
+                            case 11:
+                                keyWords[row][0] = "gone";
+                                break;
+                            case 12:
+                                keyWords[row][0] = "like";
+                                break;
+                            case 13:
+                                keyWords[row][0] = "mine";
+                                break;
+                            case 14:
+                                keyWords[row][0] = "FAKE!!!";
+                                break;
+                            case 15:
+                                keyWords[row][0] = "goodly";
+                                break;
+                        }
                     }
                 }
             }
