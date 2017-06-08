@@ -100,10 +100,11 @@ public class Chosen {
             temp.add(s[i]);
         }
         for(int row = 0; row < 16; row++){
-            cols = keyWords[row].length;
+            cols = keyWords[row].length - 1;
             ArrayList<Word> ws = s[row];
             for(int col = 0; col < cols; col++){
                  if(temp.get(row).isEmpty() != true) {
+                     System.out.println(col + " " + cols);
                      Word w = ws.get(col);
                      //System.out.println(w.getWord() + " " + col + " " + cols); can uncomment later
                      keyWords[row][col] = w.getWord();

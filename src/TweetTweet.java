@@ -25,14 +25,14 @@ public class TweetTweet {
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
         String realURL = "http://boilerpipe-web.appspot.com/extract?url=" + link + "&output=text";
-        System.out.println(realURL);
+        //System.out.println(realURL);
         //String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
 
         /*URLReader url = new URLReader(realURL); //sample text for now
         String boilerPipe = url.readerReturn(realURL);*/
         URL url2 = new URL(link);
         String text = ArticleExtractor.INSTANCE.getText(url2);
-        System.out.println(text);
+        //System.out.println(text);
 
         //HTMLtoPlainText html = new HTMLtoPlainText();
         //String plainText = html.replace(HTMLCode);
