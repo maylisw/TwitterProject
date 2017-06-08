@@ -62,7 +62,7 @@ public class TweetTweet {
 
         double d = c.getTemplate();
         System.out.println(d);
-        MadLibs madLibs = new MadLibs(d, filled, s);
+        MadLibs madLibs = new MadLibs(0.99, filled, s);
         String tweet = madLibs.getTweet();
         System.out.println(tweet);
 

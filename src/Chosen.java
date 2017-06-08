@@ -10,65 +10,66 @@ public class Chosen {
     private boolean yesNo;
 
     public Chosen( boolean y){
-        d = Math.random();
+        //d = Math.random();
         yesNo = y;
         if(yesNo == false){
             //System.out.println(d);
+            d = Math.random();
             if(d >= 0 && d < 1.0/9){
-                keyWords[1] = new String[1];
-                keyWords[4] = new String[1];
+                keyWords[1] = new String[3];
+                keyWords[4] = new String[3];
             }
             else if(d >= 1.0/9 && d < 2.0/9){
-                keyWords[8] = new String[1];
-                keyWords[5] = new String[1];
-                keyWords[0] = new String[1];
+                keyWords[8] = new String[3];
+                keyWords[5] = new String[3];
+                keyWords[0] = new String[3];
             }
             else if(d >= 2.0/9 && d < 1.0/3){
-                keyWords[5] = new String[1];
-                keyWords[6] = new String[1];
-                keyWords[1] = new String[1];
+                keyWords[5] = new String[3];
+                keyWords[6] = new String[3];
+                keyWords[1] = new String[3];
             }
             else if(d >= 1.0/3 && d < 4.0/9){
-                keyWords[6] = new String[1];
-                keyWords[10] = new String[1];
+                keyWords[6] = new String[3];
+                keyWords[10] = new String[3];
             }
             else if(d >= 4.0/9 && d < 5.0/9){
                 //tweet #7
-                keyWords[9] = new String[1];
-                keyWords[6] = new String[1];
-                keyWords[7] = new String[1];
+                keyWords[9] = new String[3];
+                keyWords[6] = new String[3];
+                keyWords[7] = new String[3];
             }
             else if(d >= 5.0/9 && d < 2.0/3){
                 //tweet #8
-                keyWords[6] = new String[2];
-                keyWords[13] = new String[1];
-                keyWords[14] = new String[1];
-                keyWords[15] = new String[1];
-                keyWords[9] = new String[1];
+                keyWords[6] = new String[3]; //2
+                keyWords[13] = new String[3];
+                keyWords[14] = new String[3];
+                keyWords[15] = new String[3];
+                keyWords[9] = new String[3];
             }
             else if(d >= 2.0/3 && d < 7.0/9){
                 //tweet #9
-                keyWords[7] = new String[1];
-                keyWords[0] = new String[2];
-                keyWords[12] = new String[1];
-                keyWords[3] = new String[1];
+                keyWords[7] = new String[3];
+                keyWords[0] = new String[3]; //2
+                keyWords[12] = new String[3];
+                keyWords[3] = new String[3];
             }
             else if(d >= 7.0/9 && d < 8.0/9){
                 //tweet #10
-                keyWords[14] = new String[1];
+                keyWords[14] = new String[3];
+                keyWords[7] = new String[3]; //3
+                keyWords[1] = new String[3]; //3
+                keyWords[2] = new String[3];
                 keyWords[7] = new String[3];
-                keyWords[1] = new String[3];
-                keyWords[2] = new String[1];
-                keyWords[7] = new String[1];
             }
             else{
-                keyWords[10] = new String[1];
+                keyWords[10] = new String[3];
                 //System.out.println(".8 & 1");
             }
         }
         else {
-            keyWords[6] = new String[1];
-            keyWords[7] = new String[1];
+            keyWords[6] = new String[3];
+            keyWords[7] = new String[3];
             d = 5.0;
         }
     }
@@ -100,18 +101,35 @@ public class Chosen {
             temp.add(s[i]);
         }
         for(int row = 0; row < 16; row++){
-            cols = keyWords[row].length - 1;
+            //cols = keyWords[row].length - 1;
             ArrayList<Word> ws = s[row];
-            for(int col = 0; col < cols -1; col++){
-                 if(temp.get(row).isEmpty() != true) {
-                     System.out.println(col + " " + cols);
-                     Word w = ws.get(col);
-                     //System.out.println(w.getWord() + " " + col + " " + cols); can uncomment later
-                     keyWords[row][col] = w.getWord();
-                 }
-                 else{
-                     keyWords[row][col] = "LIES! YOUR FIRED!!!";
-                 }
+            System.out.println(ws.size());
+            cols = ws.size();
+            if(cols < 2){
+                for(int col = 0; col < cols - 1; col++){
+                    if(temp.get(row).isEmpty() != true) {
+                        System.out.println(col + " " + cols);
+                        Word w = ws.get(col);
+                        System.out.println(w.getWord() + " " + col + " " + cols);
+                        keyWords[row][col] = w.getWord();
+                    }
+                    else{
+                        keyWords[row][col] = "LIES! YOUR FIRED!!!";
+                    }
+                }
+            }
+            else{
+                for(int col = 0; col < 2; col++){
+                    if(temp.get(row).isEmpty() != true) {
+                        System.out.println(col + " " + cols);
+                        Word w = ws.get(col);
+                        System.out.println(w.getWord() + " " + col + " " + cols);
+                        keyWords[row][col] = w.getWord();
+                    }
+                    else{
+                        keyWords[row][col] = "LIES! YOUR FIRED!!!";
+                    }
+                }
             }
         }
         return keyWords;
