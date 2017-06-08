@@ -233,6 +233,62 @@ public class Chosen {
                 }
             }
         }
+        for(int r = 0; r< keyWords.length; r++){
+            for(int c = 0; c < keyWords[r].length; c++){
+                if(keyWords[r][c] == null){
+                    switch(r) {
+                        case 0:
+                            keyWords[r][0] = "dolphin";
+                            break;
+                        case 1:
+                            keyWords[r][0] = "unicorns";
+                            break;
+                        case 2:
+                            keyWords[r][0] = "to be";
+                            break;
+                        case 3:
+                            keyWords[r][0] = "go";
+                            break;
+                        case 4:
+                            keyWords[r][0] = "goes";
+                            break;
+                        case 5:
+                            keyWords[r][0] = "Crooked Hillary";
+                            break;
+                        case 6:
+                            keyWords[r][0] = "Russians";
+                            break;
+                        case 7:
+                            keyWords[r][0] = "bad";
+                            break;
+                        case 8:
+                            keyWords[r][0] = "worse";
+                            break;
+                        case 9:
+                            keyWords[r][0] = "bestest";
+                            break;
+                        case 10:
+                            keyWords[r][0] = "ran";
+                            break;
+                        case 11:
+                            keyWords[r][0] = "gone";
+                            break;
+                        case 12:
+                            keyWords[r][0] = "like";
+                            break;
+                        case 13:
+                            keyWords[r][0] = "mine";
+                            break;
+                        case 14:
+                            keyWords[r][0] = "FAKE!!!";
+                            break;
+                        case 15:
+                            keyWords[r][0] = "goodly";
+                            break;
+                    }
+                }
+            }
+        }
         return keyWords;
     }
 
