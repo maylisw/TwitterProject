@@ -87,9 +87,7 @@ public class POSArrayLists{
         return pastParticipleVerb;
     }
 
-    public ArrayList<Word> getModalVerb(){
-        return modalVerb;
-    }
+    public ArrayList<Word> getModalVerb() { return modalVerb; }
 
     public ArrayList<Word> getPossessivePronoun() {
         return possessivePronoun;

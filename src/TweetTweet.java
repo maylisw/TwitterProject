@@ -52,7 +52,7 @@ public class TweetTweet {
         String [][] filled = c.fill(taggedLists);
 
         double d = c.getTemplate();
-        //System.out.println(d);
+        System.out.println(d);
         MadLibs madLibs = new MadLibs(d, filled, s);
         String tweet = madLibs.getTweet();
         System.out.println(tweet);

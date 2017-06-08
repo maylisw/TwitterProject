@@ -17,24 +17,20 @@ public class Chosen {
             if(d >= 0 && d < 1.0/9){
                 keyWords[1] = new String[1];
                 keyWords[4] = new String[1];
-                //System.out.println("0 &.2");
             }
             else if(d >= 1.0/9 && d < 2.0/9){
                 keyWords[8] = new String[1];
                 keyWords[5] = new String[1];
                 keyWords[0] = new String[1];
-                //System.out.println(".2 &.4");
             }
             else if(d >= 2.0/9 && d < 1.0/3){
                 keyWords[5] = new String[1];
                 keyWords[6] = new String[1];
                 keyWords[1] = new String[1];
-                //System.out.println(".4 &.6");
             }
             else if(d >= 1.0/3 && d < 4.0/9){
                 keyWords[6] = new String[1];
                 keyWords[10] = new String[1];
-                //System.out.println(".6 &.8");
             }
             else if(d >= 4.0/9 && d < 5.0/9){
                 //tweet #7
@@ -113,7 +109,7 @@ public class Chosen {
                      keyWords[row][col] = w.getWord();
                  }
                  else{
-                     keyWords[row][col] = "TESTER";
+                     keyWords[row][col] = "LIES! YOUR FIRED!!!";
                  }
             }
         }
@@ -123,13 +119,5 @@ public class Chosen {
     public double getTemplate(){
         return d;
     }
-
-    /*public boolean isFilled(){
-        ArrayList<ArrayList<Word>> aL = new ArrayList<>();
-        int i = 0;
-        while(i < 12){
-            aL.add(this.);
-        }
-    }*/
 
 }
