@@ -1,20 +1,26 @@
 import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 
 import javax.swing.*;
+import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.ArrayList;
+
+import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.TwitterFactory;
 import twitter4j.Twitter;
 import twitter4j.Status;
 import twitter4j.TwitterException;
+import de.l3s.boilerpipe.extractors.ArticleExtractor;
+import de.l3s.boilerpipe.extractors.DefaultExtractor;
+import java.net.URL;
 
 /**
  * Created by mayliswhetsel on 5/8/17.
  * Main class: 2D Array --> Tweet --> Image --> Twitter
  */
 public class TweetTweet {
-    public static void main(String[] args) throws TwitterException {
+    public static void main(String[] args) throws TwitterException, MalformedURLException, BoilerpipeProcessingException {
         UserInput userInput = new UserInput();
         System.out.print("What article do you want to make Trump react to? --> ");
         String link = userInput.getString();
@@ -22,13 +28,16 @@ public class TweetTweet {
         System.out.println(realURL);
         //String boilerPipeURL = "http://boilerpipe-web.appspot.com/extract?url=https://www.theodysseyonline.com/rape-culture-important-details-missed&output=text";
 
-        URLReader url = new URLReader(realURL); //sample text for now
-        String boilerPipe = url.readerReturn(realURL);
+        /*URLReader url = new URLReader(realURL); //sample text for now
+        String boilerPipe = url.readerReturn(realURL);*/
+        URL url2 = new URL(link);
+        String text = ArticleExtractor.INSTANCE.getText(url2);
+        System.out.println(text);
 
         //HTMLtoPlainText html = new HTMLtoPlainText();
         //String plainText = html.replace(HTMLCode);
 
-        TextTOSortedArray obj = new TextTOSortedArray(boilerPipe);
+        TextTOSortedArray obj = new TextTOSortedArray(text);
         String[] tokenArray = obj.tokenize();
 
         String[] tokenArray2 = obj.punctuationRemoval(tokenArray);
@@ -39,7 +48,7 @@ public class TweetTweet {
 
         SortedTOWordObjectArrayList obj2 = new SortedTOWordObjectArrayList(betterTokenArray);
         ArrayList<Word> wordList = obj2.listed();
-        PartOfSpeech p = new PartOfSpeech(wordList, boilerPipe);
+        PartOfSpeech p = new PartOfSpeech(wordList, text);
 
         PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
