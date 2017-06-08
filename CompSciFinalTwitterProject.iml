@@ -18,5 +18,15 @@
     <orderEntry type="library" name="com.twitter:hbc-twitter4j:2.2.0" level="project" />
     <orderEntry type="library" name="de.l3s.boilerpipe:boilerpipe:1.1.0" level="project" />
     <orderEntry type="library" name="com.nrinaudo:kantan.xpath-nekohtml_2.10:0.1.0" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/boilerpipe-1.1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="jar_files" level="project" />
   </component>
 </module>

@@ -34,32 +34,32 @@ public class Chosen {
             }
             else if(d >= 4.0/9 && d < 5.0/9){
                 //tweet #7
-                keyWords[10] = new String[1];
+                keyWords[9] = new String[1];
+                keyWords[6] = new String[1];
                 keyWords[7] = new String[1];
-                keyWords[8] = new String[1];
             }
             else if(d >= 5.0/9 && d < 2.0/3){
                 //tweet #8
-                keyWords[7] = new String[2];
+                keyWords[6] = new String[2];
+                keyWords[13] = new String[1];
                 keyWords[14] = new String[1];
                 keyWords[15] = new String[1];
-                keyWords[16] = new String[1];
-                keyWords[10] = new String[1];
+                keyWords[9] = new String[1];
             }
             else if(d >= 2.0/3 && d < 7.0/9){
                 //tweet #9
-                keyWords[8] = new String[1];
-                keyWords[1] = new String[2];
-                keyWords[13] = new String[1];
-                keyWords[4] = new String[1];
+                keyWords[7] = new String[1];
+                keyWords[0] = new String[2];
+                keyWords[12] = new String[1];
+                keyWords[3] = new String[1];
             }
             else if(d >= 7.0/9 && d < 8.0/9){
                 //tweet #10
-                keyWords[15] = new String[1];
-                keyWords[8] = new String[3];
-                keyWords[2] = new String[3];
-                keyWords[3] = new String[1];
-                keyWords[9] = new String[1];
+                keyWords[14] = new String[1];
+                keyWords[7] = new String[3];
+                keyWords[1] = new String[3];
+                keyWords[2] = new String[1];
+                keyWords[7] = new String[1];
             }
             else{
                 keyWords[10] = new String[1];
@@ -102,7 +102,7 @@ public class Chosen {
         for(int row = 0; row < 16; row++){
             cols = keyWords[row].length - 1;
             ArrayList<Word> ws = s[row];
-            for(int col = 0; col < cols; col++){
+            for(int col = 0; col < cols -1; col++){
                  if(temp.get(row).isEmpty() != true) {
                      System.out.println(col + " " + cols);
                      Word w = ws.get(col);
