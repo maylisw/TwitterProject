@@ -103,11 +103,12 @@ public class Chosen {
         for(int row = 0; row < 16; row++){
             //cols = keyWords[row].length - 1;
             ArrayList<Word> ws = s[row];
-            //System.out.println(ws.size());
+            //System.out.println("WS size:" + ws.size());
             cols = ws.size();
             if(cols < 2){
                 for(int col = 0; col < cols - 1; col++){
                     Word wTest = ws.get(col);
+                    System.out.println("wTest:" + wTest);
                     if(wTest != null){//temp.get(row).isEmpty() != true) {
                         //System.out.println(col + " " + cols);
                         Word w = ws.get(col);
@@ -117,10 +118,10 @@ public class Chosen {
                     else{
                         switch(row) {
                             case 0:
-                                keyWords[row][0] = "dolphin";
+                                keyWords[row][0] = "dog";
                                 break;
                             case 1:
-                                keyWords[row][0] = "unicorns";
+                                keyWords[row][0] = "cats";
                                 break;
                             case 2:
                                 keyWords[row][0] = "to be";
@@ -173,18 +174,16 @@ public class Chosen {
                 for(int col = 0; col < 2; col++){
                     Word wTest = ws.get(col);
                     if(wTest != null) {
-                        //System.out.println(col + " " + cols);
                         Word w = ws.get(col);
-                        //System.out.println(w.getWord() + " " + col + " " + cols);
                         keyWords[row][col] = w.getWord();
                     }
                     else{
                         switch(row) {
                             case 0:
-                                keyWords[row][0] = "dolphin";
+                                keyWords[row][0] = "dog";
                                 break;
                             case 1:
-                                keyWords[row][0] = "unicorns";
+                                keyWords[row][0] = "cats";
                                 break;
                             case 2:
                                 keyWords[row][0] = "to be";
@@ -233,59 +232,74 @@ public class Chosen {
                 }
             }
         }
-        for(int r = 0; r< keyWords.length; r++){
-            for(int c = 0; c < keyWords[r].length; c++){
-                if(keyWords[r][c] == null){
-                    switch(r) {
-                        case 0:
-                            keyWords[r][0] = "dolphin";
-                            break;
-                        case 1:
-                            keyWords[r][0] = "unicorns";
-                            break;
-                        case 2:
-                            keyWords[r][0] = "to be";
-                            break;
-                        case 3:
-                            keyWords[r][0] = "go";
-                            break;
-                        case 4:
-                            keyWords[r][0] = "goes";
-                            break;
-                        case 5:
-                            keyWords[r][0] = "Crooked Hillary";
-                            break;
-                        case 6:
-                            keyWords[r][0] = "Russians";
-                            break;
-                        case 7:
-                            keyWords[r][0] = "bad";
-                            break;
-                        case 8:
-                            keyWords[r][0] = "worse";
-                            break;
-                        case 9:
-                            keyWords[r][0] = "bestest";
-                            break;
-                        case 10:
-                            keyWords[r][0] = "ran";
-                            break;
-                        case 11:
-                            keyWords[r][0] = "gone";
-                            break;
-                        case 12:
-                            keyWords[r][0] = "like";
-                            break;
-                        case 13:
-                            keyWords[r][0] = "mine";
-                            break;
-                        case 14:
-                            keyWords[r][0] = "FAKE!!!";
-                            break;
-                        case 15:
-                            keyWords[r][0] = "goodly";
-                            break;
-                    }
+        for(int r = 0; r < keyWords.length; r++){
+            if(keyWords[r][0] == null){
+                switch(r) {
+                    case 0:
+                        keyWords[r][0] = "dog";
+                        System.out.println("added dog rc null");
+                        break;
+                    case 1:
+                        keyWords[r][0] = "cats";
+                        System.out.println("added cats rc null");
+                        break;
+                    case 2:
+                        keyWords[r][0] = "to be";
+                        System.out.println("added to be rc null");
+                        break;
+                    case 3:
+                        keyWords[r][0] = "go";
+                        System.out.println("added go rc null");
+                        break;
+                    case 4:
+                        keyWords[r][0] = "goes";
+                        System.out.println("added goes rc null");
+                        break;
+                    case 5:
+                        keyWords[r][0] = "Crooked Hillary";
+                        System.out.println("added Crooked Hillary rc null");
+                        break;
+                    case 6:
+                        keyWords[r][0] = "Russians";
+                        System.out.println("added Russians rc null");
+                        break;
+                    case 7:
+                        keyWords[r][0] = "bad";
+                        System.out.println("added bad rc null");
+                        break;
+                    case 8:
+                        keyWords[r][0] = "worse";
+                        System.out.println("added worse rc null");
+                        break;
+                    case 9:
+                        keyWords[r][0] = "bestest";
+                        System.out.println("added bestest rc null");
+                        break;
+                    case 10:
+                        keyWords[r][0] = "ran";
+                        System.out.println("added ran rc null");
+                        break;
+                    case 11:
+                        keyWords[r][0] = "gone";
+                        System.out.println("added gone rc null");
+                        break;
+                    case 12:
+                        keyWords[r][0] = "like";
+                        System.out.println("added like rc null");
+                        break;
+                    case 13:
+                        keyWords[r][0] = "mine";
+                        System.out.println("added mine rc null");
+                        break;
+                    case 14:
+                        keyWords[r][0] = "FAKE!!!";
+                        System.out.println("added FAKE!!! rc null");
+                        break;
+                    case 15:
+                        keyWords[r][0] = "goodly";
+                        System.out.println("added goodly rc null");
+                        break;
+
                 }
             }
         }

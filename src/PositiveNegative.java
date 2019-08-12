@@ -8,7 +8,7 @@ public class PositiveNegative {
 
     public PositiveNegative(String url){
         //locate first www and cut off from that to the &output=text to isolate URL (until userInput works
-        if(url.contains("tigernewspaper")){
+        if(url.contains("tigernewspaper") || url.contains("us.cnn.com")){
             url = "www." + url;
         }
         int firstWWW = url.indexOf("www");

@@ -1,9 +1,8 @@
-import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
-
 import javax.swing.*;
 import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.function.Function;
 
 import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import twitter4j.conf.ConfigurationBuilder;
@@ -63,7 +62,7 @@ public class TweetTweet {
         double d = c.getTemplate();
         System.out.println(d);
         MadLibs madLibs = new MadLibs(d, filled, s); //d = 0.04 URL = http://www.cnn.com/2017/06/01/politics/hillary-clinton-2016/index.html
-        String tweet = madLibs.getTweet();
+        String tweet = madLibs.getTweet() + "\n link: "+link;
         System.out.println(tweet);
 
         //TextTOSortedArray tester = new TextTOSortedArray(plainText);
@@ -73,7 +72,7 @@ public class TweetTweet {
         String tweet = madLibs.getTweet(); //why are only 1 and 6 working? --> k < 0 = 1; k > 0 = 6*/
 
 
-        /*ConfigurationBuilder cb = new ConfigurationBuilder();
+        ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
                 .setOAuthConsumerKey("Kcv2jop3cdiHPFAM1Gik8hirB")
                 .setOAuthConsumerSecret("dz2EVFTJWPvBnZwszoOI4AHifOk5izx9ZMWsiV61LRAUt5qhql")
@@ -82,7 +81,7 @@ public class TweetTweet {
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
         Status status = twitter.updateStatus(tweet);
-        System.out.println("Successfully updated the status to [" + status.getText() + "].");*/
+        System.out.println("Successfully updated the status to [" + status.getText() + "].");
 
     }
 }
