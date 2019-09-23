@@ -52,7 +52,7 @@ public class TweetTweet {
         PositiveNegative posNeg = new PositiveNegative(realURL);
         boolean goodBad = posNeg.whichTemplate();
         String s = posNeg.whichNews();
-        //System.out.println(goodBad);
+        //System.out.println(goodBad)
 
         POSArrayLists taggedLists = p.tagging();
 
