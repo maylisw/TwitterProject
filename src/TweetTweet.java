@@ -74,10 +74,10 @@ public class TweetTweet {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("Kcv2jop3cdiHPFAM1Gik8hirB")
-                .setOAuthConsumerSecret("dz2EVFTJWPvBnZwszoOI4AHifOk5izx9ZMWsiV61LRAUt5qhql")
-                .setOAuthAccessToken("870735718355574784-QtJCCRPArbSuzZPDpaS5ilaBQ8ZXkY4")
-                .setOAuthAccessTokenSecret("eremAiNxiuAvmFQhIshTXoT47g4VcWt6xx1qvQCdKH5Io");
+                .setOAuthConsumerKey(TwitterKeys.OAUTH_CON_KEY)
+                .setOAuthConsumerSecret(TwitterKeys.OAUTH_CON_SECRET)
+                .setOAuthAccessToken(TwitterKeys.OAUTH_ACCESS_TOKEN)
+                .setOAuthAccessTokenSecret(TwitterKeys.OAUTH_ACCESS_TOKEN_SECRET);
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
         Status status = twitter.updateStatus(tweet);
