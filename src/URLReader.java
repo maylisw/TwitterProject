@@ -23,7 +23,7 @@ public class URLReader {
                 //System.out.println(inputLine);
                 HTMLCode += inputLine;
         } catch (Exception e) {
-            e.printStackTrace(); //
+            e.printStackTrace();
         }
         finally {
             try {
