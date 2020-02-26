@@ -60,7 +60,6 @@ public class MadLibs {
                 case 9:
                     tweet = words[14][0] + "! We need to be " + words[7][0].toUpperCase() + ", " + words[7][1].toUpperCase() + ", and " + words[7][2].toUpperCase() + ". We need the " + words[1][0] + " " + words[2][0] + " our " + words[1][1] + " now! No " + words[8][0] + " " + words[1][2] + "!";
                     break;
-                    //adding a comment
             }
 
         }
