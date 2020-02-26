@@ -34,7 +34,7 @@ public class MadLibs {
                 case 1: //negative
                     tweet = "The real problem is that " + words[1][0] + " " + words[3][0] + " " + words[0][0] + "! Very un-American!";
                     break;
-                case 2: //negative
+                case 2: //negativ
                     tweet = "Despite the efforts of " + words[8][0] + " " + words[5][0].substring(0,1).toUpperCase() + words[5][0].substring(1, words[5][0].length()) + " to stop us, " + words[0][0] + " is moving quickly!";
                     break;
                 case 3: //negative
